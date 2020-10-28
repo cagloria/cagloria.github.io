@@ -10,8 +10,8 @@ Coding:
 -   JavaScript
 -   jQuery
 -   Sass
--   CSS3
--   HTML5
+-   CSS
+-   HTML
 
 Project management:
 
@@ -22,7 +22,3 @@ Other tools:
 
 -   Chrome DevTools
 -   Visual Studio Code
-
-UI design:
-
--   InVision Studio
