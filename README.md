@@ -4,7 +4,7 @@ I'm a software engineering graduate and frontend developer dedicated to user-fri
 
 ## Skills
 
-### Languages
+### Languages and Libraries
 
 <p>
   <img alt="React" src="https://shields.io/badge/React-61DAFB?logo=React&logoColor=black&style=for-the-badge" />
