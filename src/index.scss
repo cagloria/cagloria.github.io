@@ -112,7 +112,6 @@ p {
     width: fit-content;
     height: fit-content;
     margin: 0 auto;
-    transition: transform 0.5s ease-in;
     text-decoration: none;
     color: var(--text-light);
     &__icon {
@@ -121,19 +120,23 @@ p {
     &__cover {
         position: absolute;
         z-index: -1;
-        top: 22%;
-        left: 22%;
-        width: 57%;
-        height: 55%;
+        top: 0;
+        left: 12px;
+        width: 44px;
+        height: 100%;
         background-color: var(--background);
+    }
+    &__icon,
+    &__cover {
+        transition: transform 0.5s ease-out;
     }
     &__text {
         position: absolute;
         z-index: -2;
         top: 35%;
-        left: 14%;
+        left: 14px;
         padding: 2px 6px;
-        transition: left 0.5s ease-in, opacity 0.5s ease-in;
+        transition: left 0.5s ease-out, opacity 0.5s ease-out;
         opacity: 0;
         color: var(--text-dark);
         border-radius: 0 8px 8px 0;
@@ -142,10 +145,15 @@ p {
 
     &:hover,
     &:focus {
-        transform: translateX(-56px);
-        .github-link__text {
-            left: 56px;
-            opacity: 1;
+        .github-link {
+            &__icon,
+            &__cover {
+                transform: translateX(-56px);
+            }
+            &__text {
+                left: 0;
+                opacity: 1;
+            }
         }
     }
 }

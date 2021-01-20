@@ -143,10 +143,6 @@ p {
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
-  -webkit-transition: -webkit-transform 0.5s ease-in;
-  transition: -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   text-decoration: none;
   color: var(--text-light);
 }
@@ -158,34 +154,41 @@ p {
 .github-link__cover {
   position: absolute;
   z-index: -1;
-  top: 22%;
-  left: 22%;
-  width: 57%;
-  height: 55%;
+  top: 0;
+  left: 12px;
+  width: 44px;
+  height: 100%;
   background-color: var(--background);
+}
+
+.github-link__icon, .github-link__cover {
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .github-link__text {
   position: absolute;
   z-index: -2;
   top: 35%;
-  left: 14%;
+  left: 14px;
   padding: 2px 6px;
-  -webkit-transition: left 0.5s ease-in, opacity 0.5s ease-in;
-  transition: left 0.5s ease-in, opacity 0.5s ease-in;
+  -webkit-transition: left 0.5s ease-out, opacity 0.5s ease-out;
+  transition: left 0.5s ease-out, opacity 0.5s ease-out;
   opacity: 0;
   color: var(--text-dark);
   border-radius: 0 8px 8px 0;
   background-color: var(--text-light);
 }
 
-.github-link:hover, .github-link:focus {
+.github-link:hover .github-link__icon, .github-link:hover .github-link__cover, .github-link:focus .github-link__icon, .github-link:focus .github-link__cover {
   -webkit-transform: translateX(-56px);
           transform: translateX(-56px);
 }
 
 .github-link:hover .github-link__text, .github-link:focus .github-link__text {
-  left: 56px;
+  left: 0;
   opacity: 1;
 }
 
