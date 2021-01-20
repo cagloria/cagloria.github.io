@@ -116,19 +116,6 @@ p {
   text-align: center;
 }
 
-.subtitle {
-  font-size: clamp(1.25em, 4.25vw, 2.25em);
-  font-weight: 300;
-  margin: 0;
-  text-align: left;
-}
-
-@media only screen and (min-width: 426px) {
-  .subtitle {
-    line-height: 42.19px;
-  }
-}
-
 .focus-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +134,19 @@ p {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.subtitle {
+  font-size: clamp(1.25em, 4.25vw, 2.25em);
+  font-weight: 300;
+  margin: 0;
+  text-align: left;
+}
+
+@media only screen and (min-width: 426px) {
+  .subtitle {
+    line-height: 42.19px;
+  }
 }
 
 .github-link {

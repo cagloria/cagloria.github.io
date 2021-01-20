@@ -1,0 +1,82 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 32px var(--side-padding) 64px;
+    color: var(--text-light);
+    background: var(--background);
+    --side-padding: 10vw;
+    @media only screen and (min-width: 1024px) {
+        --side-padding: 15vw;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        --side-padding: 20vw;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 124px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 62px;
+    }
+}
+
+section {
+    margin-bottom: 64px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 96px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 124px;
+    }
+}
+
+h1 {
+    font-size: clamp(3em, 14vw, 4.5em);
+    font-weight: 300;
+    line-height: 150%;
+    margin: 0 32px 16px 0;
+}
+
+h2 {
+    font-size: clamp(2.25em, 8vw, 3em);
+    font-weight: 300;
+    line-height: 150%;
+    margin: 0 0 24px;
+    text-align: center;
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 40px;
+    }
+}
+
+h3 {
+    font-size: clamp(1.5em, 4.5vw, 2em);
+    font-weight: 300;
+    line-height: 150%;
+    margin: 16px 0;
+    text-align: center;
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 24px;
+    }
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 150%;
+    max-width: 50ch;
+    margin: 1em auto;
+    text-align: center;
+}
