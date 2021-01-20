@@ -10,49 +10,75 @@
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
-    padding: 32px 32px 64px;
+    padding: 32px var(--side-padding) 64px;
     color: var(--text-light);
     background: var(--background);
+    --side-padding: 10vw;
+    @media only screen and (min-width: 1024px) {
+        --side-padding: 15vw;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        --side-padding: 20vw;
+    }
+}
+
+header,
+section {
+    margin: 0 0 64px;
+
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 96px;
+    }
 }
 
 header {
-    margin: 0 0 62px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 section {
-    margin: 0 0 62px;
-
     &:last-child {
         margin-bottom: 0;
     }
 }
 
 h1 {
-    font-size: 3em;
+    font-size: clamp(3em, 14vw, 4.5em);
     font-weight: 300;
-    line-height: 56px;
-    margin: 0 0 16px;
+    line-height: 150%;
+    margin: 0 32px 16px 0;
 }
 
 h2 {
-    font-size: 2.25em;
+    font-size: clamp(2.25em, 8vw, 3em);
     font-weight: 300;
-    line-height: 42px;
+    line-height: 150%;
     margin: 0 0 24px;
     text-align: center;
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 40px;
+    }
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 4.5vw, 2em);
     font-weight: 300;
-    line-height: 28px;
+    line-height: 150%;
     margin: 16px 0;
     text-align: center;
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 24px;
+    }
 }
 
 p {
     font-size: 1.125em;
-    line-height: 27px;
+    line-height: 150%;
+    max-width: 40ch;
+    margin: 1em auto;
     text-align: center;
 }
 
@@ -63,18 +89,33 @@ p {
 }
 
 .subtitle {
-    font-size: 20px;
+    font-size: clamp(1.25em, 4.25vw, 2.25em);
     font-weight: 300;
-    line-height: 28px;
     margin: 0;
     text-align: left;
+    @media only screen and (min-width: 426px) {
+        line-height: 42.19px;
+    }
+}
+
+.focus-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .focus {
     margin-bottom: 48px;
+    max-width: 300px;
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .project {
@@ -88,13 +129,16 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-right: -8px;
+    max-width: 400px;
+    margin: 0 auto;
     padding-left: 0;
     list-style-type: none;
+    --gap: 16px;
     li {
         font-size: 1em;
         height: fit-content;
-        margin: 0 8px 16px 0;
+        margin-right: var(--gap);
+        margin-bottom: var(--gap);
         padding: 6px 18px;
         text-align: center;
         color: var(--text-dark);
@@ -102,6 +146,12 @@ p {
         background-color: var(--primary);
         &:last-child {
             margin: 0;
+        }
+    }
+
+    @media only screen and (min-width: 426px) {
+        li {
+            font-size: 1.125em;
         }
     }
 }
