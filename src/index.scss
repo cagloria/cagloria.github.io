@@ -106,6 +106,50 @@ p {
     }
 }
 
+.github-link {
+    position: relative;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    transition: transform 0.5s ease-in;
+    text-decoration: none;
+    color: var(--text-light);
+    &__icon {
+        font-size: 64px;
+    }
+    &__cover {
+        position: absolute;
+        z-index: -1;
+        top: 22%;
+        left: 22%;
+        width: 57%;
+        height: 55%;
+        background-color: var(--background);
+    }
+    &__text {
+        position: absolute;
+        z-index: -2;
+        top: 35%;
+        left: 14%;
+        padding: 2px 6px;
+        transition: left 0.5s ease-in, opacity 0.5s ease-in;
+        opacity: 0;
+        color: var(--text-dark);
+        border-radius: 0 8px 8px 0;
+        background-color: var(--text-light);
+    }
+
+    &:hover,
+    &:focus {
+        transform: translateX(-56px);
+        .github-link__text {
+            left: 56px;
+            opacity: 1;
+        }
+    }
+}
+
 .focus-container {
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +157,7 @@ p {
 }
 
 .focus {
-    max-width: 300px;
+    max-width: 350px;
     margin-bottom: 48px;
     &:last-child {
         margin-bottom: 0;
@@ -143,7 +187,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 650px;
+    max-width: 550px;
     margin: 0 auto;
     padding-left: 0;
     list-style-type: none;

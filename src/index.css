@@ -133,6 +133,62 @@ p {
   }
 }
 
+.github-link {
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+.github-link__icon {
+  font-size: 64px;
+}
+
+.github-link__cover {
+  position: absolute;
+  z-index: -1;
+  top: 22%;
+  left: 22%;
+  width: 57%;
+  height: 55%;
+  background-color: var(--background);
+}
+
+.github-link__text {
+  position: absolute;
+  z-index: -2;
+  top: 35%;
+  left: 14%;
+  padding: 2px 6px;
+  -webkit-transition: left 0.5s ease-in, opacity 0.5s ease-in;
+  transition: left 0.5s ease-in, opacity 0.5s ease-in;
+  opacity: 0;
+  color: var(--text-dark);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--text-light);
+}
+
+.github-link:hover, .github-link:focus {
+  -webkit-transform: translateX(-56px);
+          transform: translateX(-56px);
+}
+
+.github-link:hover .github-link__text, .github-link:focus .github-link__text {
+  left: 56px;
+  opacity: 1;
+}
+
 .focus-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,7 +200,7 @@ p {
 }
 
 .focus {
-  max-width: 300px;
+  max-width: 350px;
   margin-bottom: 48px;
 }
 
@@ -185,7 +241,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 650px;
+  max-width: 550px;
   margin: 0 auto;
   padding-left: 0;
   list-style-type: none;
