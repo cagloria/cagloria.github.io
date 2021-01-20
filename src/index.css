@@ -26,18 +26,6 @@ body {
   }
 }
 
-header,
-section {
-  margin: 0 0 64px;
-}
-
-@media only screen and (min-width: 426px) {
-  header,
-  section {
-    margin-bottom: 96px;
-  }
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,10 +38,39 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+@media only screen and (min-width: 426px) {
+  header {
+    margin-bottom: 124px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    margin-bottom: 62px;
+  }
+}
+
+section {
+  margin-bottom: 64px;
 }
 
 section:last-child {
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 426px) {
+  section {
+    margin-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    margin-bottom: 124px;
+  }
 }
 
 h1 {
@@ -94,7 +111,7 @@ h3 {
 p {
   font-size: 1.125em;
   line-height: 150%;
-  max-width: 40ch;
+  max-width: 50ch;
   margin: 1em auto;
   text-align: center;
 }
@@ -120,29 +137,35 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .focus {
-  margin-bottom: 48px;
   max-width: 300px;
+  margin-bottom: 48px;
 }
 
 .focus:last-child {
   margin-bottom: 0;
 }
 
+.focus span.material-icons {
+  font-size: clamp(75px, 10vw, 100px);
+  display: block;
+  text-align: center;
+}
+
 .project-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .project {
@@ -162,7 +185,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 400px;
+  max-width: 650px;
   margin: 0 auto;
   padding-left: 0;
   list-style-type: none;
@@ -190,5 +213,11 @@ p {
 @media only screen and (min-width: 426px) {
   .skills-ul li {
     font-size: 1.125em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .skills-ul {
+    --gap: 32px;
   }
 }
