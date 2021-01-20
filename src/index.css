@@ -14,8 +14,16 @@ body {
   --side-padding: 10vw;
 }
 
+@media only screen and (min-width: 426px) {
+  body {
+    margin-bottom: 112px;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   body {
+    margin-top: 64px;
+    margin-bottom: 124px;
     --side-padding: 15vw;
   }
 }
@@ -233,9 +241,48 @@ p {
   width: 100%;
 }
 
+.project__image {
+  max-width: 500px;
+  height: 175px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .project__links {
   max-width: 250px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 426px) {
+  .project {
+    margin-bottom: 96px;
+  }
+  .project__image {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 75%;
+    max-width: 1000px;
+    margin-bottom: 64px;
+  }
+  .project__image {
+    width: 45%;
+    height: 100%;
+    margin-right: 64px;
+    margin-bottom: 0;
+  }
+  .project__content {
+    width: 55%;
+    min-width: 40ch;
+  }
 }
 
 .skills-ul {

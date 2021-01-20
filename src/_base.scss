@@ -5,7 +5,13 @@ body {
     color: var(--text-light);
     background: var(--background);
     --side-padding: 10vw;
+    @media only screen and (min-width: 426px) {
+        margin-bottom: 112px;
+    }
+
     @media only screen and (min-width: 1024px) {
+        margin-top: 64px;
+        margin-bottom: 124px;
         --side-padding: 15vw;
     }
 
