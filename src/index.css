@@ -1,0 +1,114 @@
+:root {
+  --background: #121212;
+  --primary: #2fb2d0;
+  --text-light: #d9d9d9;
+  --text-dark: #2e2e2e;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 32px 32px 64px;
+  color: var(--text-light);
+  background: var(--background);
+}
+
+header {
+  margin: 0 0 62px;
+}
+
+section {
+  margin: 0 0 62px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 56px;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 300;
+  line-height: 42px;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+p {
+  font-size: 1.125em;
+  line-height: 27px;
+  text-align: center;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 0;
+  text-align: left;
+}
+
+.focus {
+  margin-bottom: 48px;
+}
+
+.focus:last-child {
+  margin-bottom: 0;
+}
+
+.project {
+  margin-bottom: 48px;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.skills-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: -8px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.skills-ul li {
+  font-size: 1em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 8px 16px 0;
+  padding: 6px 18px;
+  text-align: center;
+  color: var(--text-dark);
+  border-radius: 20px;
+  background-color: var(--primary);
+}
+
+.skills-ul li:last-child {
+  margin: 0;
+}
