@@ -116,10 +116,6 @@ p {
   text-align: center;
 }
 
-.color-primary {
-  color: var(--primary);
-}
-
 .subtitle {
   font-size: clamp(1.25em, 4.25vw, 2.25em);
   font-weight: 300;
@@ -131,6 +127,26 @@ p {
   .subtitle {
     line-height: 42.19px;
   }
+}
+
+.focus-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .github-link {
@@ -156,7 +172,7 @@ p {
   z-index: -1;
   top: 0;
   left: 12px;
-  width: 44px;
+  width: 41px;
   height: 100%;
   background-color: var(--background);
 }
@@ -192,14 +208,11 @@ p {
   opacity: 1;
 }
 
-.focus-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+.github-link--shorter-translate:hover .github-link__icon,
+.github-link--shorter-translate:hover .github-link__cover, .github-link--shorter-translate:focus .github-link__icon,
+.github-link--shorter-translate:focus .github-link__cover {
+  -webkit-transform: translateX(-54px);
+          transform: translateX(-54px);
 }
 
 .focus {
@@ -217,22 +230,22 @@ p {
   text-align: center;
 }
 
-.project-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .project {
   margin-bottom: 48px;
+  width: 100%;
 }
 
 .project:last-child {
   margin-bottom: 0;
+}
+
+.project > * {
+  width: 100%;
+}
+
+.project__links {
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 .skills-ul {
@@ -286,4 +299,17 @@ p {
   .skills-ul {
     --gap: 32px;
   }
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.flex-row-justify-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
