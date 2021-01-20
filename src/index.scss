@@ -198,12 +198,18 @@ p {
         margin-right: var(--gap);
         margin-bottom: var(--gap);
         padding: 6px 18px;
+        transition: padding 0.4s ease-in;
         text-align: center;
         color: var(--text-dark);
         border-radius: 20px;
         background-color: var(--primary);
         &:last-child {
             margin: 0;
+        }
+
+        &:hover {
+            padding-right: 32px;
+            padding-left: 32px;
         }
     }
 
