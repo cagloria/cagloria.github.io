@@ -7,6 +7,7 @@ class ProjectElement extends HTMLDivElement {
         const image = this.dataset.image;
         const alt = this.dataset.alt;
         const title = this.dataset.title;
+        const dateRange = this.dataset.date;
         const description = this.dataset.description;
         const tools = this.dataset.tools;
         const code = this.dataset.code;
@@ -48,6 +49,8 @@ class ProjectElement extends HTMLDivElement {
             <img src="${image}" alt="${alt}" class="project__image" />
             <div class="project__content">
                 <h3>${title}</h3>
+
+                <p>${dateRange}</p>
                 
                 <p>${description}</p>
                 
