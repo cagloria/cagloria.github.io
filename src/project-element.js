@@ -54,8 +54,8 @@ class ProjectElement extends HTMLDivElement {
                 <p><b>Tools:</b> ${tools}</p>
                 
                 <div class="flex-row-justify-center project__links">
-                    ${codeElement}
                     ${previewElement}
+                    ${codeElement}
                 </div>
             </div>
         `;
