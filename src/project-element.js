@@ -31,14 +31,8 @@ class ProjectElement extends HTMLDivElement {
             preview === undefined
                 ? ""
                 : `
-            <a 
-                href="${preview}"
-                class="icon-link icon-link--shorter-translate"
-            >
-                <span
-                    class="material-icons icon-link__icon"
-                    aria-hidden="true"
-                >
+            <a href="${preview}" class="icon-link icon-link--shorter-translate">
+                <span class="material-icons icon-link__icon" aria-hidden="true">
                     play_circle
                 </span>
                 <div class="icon-link__cover"></div>
