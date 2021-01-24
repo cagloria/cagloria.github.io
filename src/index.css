@@ -3,15 +3,16 @@
   --primary: #2fb2d0;
   --text-light: #d9d9d9;
   --text-dark: #2e2e2e;
+  --side-padding: 10vw;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  padding: 32px var(--side-padding) 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--text-light);
   background: var(--background);
-  --side-padding: 10vw;
 }
 
 @media only screen and (min-width: 426px) {
@@ -47,6 +48,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 64px;
+  padding-right: var(--side-padding);
+  padding-left: var(--side-padding);
 }
 
 @media only screen and (min-width: 426px) {
@@ -61,8 +64,22 @@ header {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  header {
+    --side-padding: 15vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  header {
+    --side-padding: 20vw;
+  }
+}
+
 section {
   margin-bottom: 64px;
+  padding-right: var(--side-padding);
+  padding-left: var(--side-padding);
 }
 
 section:last-child {
@@ -78,6 +95,18 @@ section:last-child {
 @media only screen and (min-width: 768px) {
   section {
     margin-bottom: 124px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section {
+    --side-padding: 15vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  section {
+    --side-padding: 20vw;
   }
 }
 
