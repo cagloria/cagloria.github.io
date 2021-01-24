@@ -8,7 +8,7 @@
     }
 }
 
-.github-link {
+.icon-link {
     position: relative;
     display: block;
     width: fit-content;
@@ -47,7 +47,7 @@
 
     &:hover,
     &:focus {
-        .github-link {
+        .icon-link {
             &__icon,
             &__cover {
                 transform: translateX(-56px);
@@ -62,8 +62,8 @@
     &--shorter-translate {
         &:hover,
         &:focus {
-            .github-link__icon,
-            .github-link__cover {
+            .icon-link__icon,
+            .icon-link__cover {
                 transform: translateX(-54px);
             }
         }
@@ -128,6 +128,7 @@
 
         &__content {
             width: 55%;
+            margin-right: 64px;
             min-width: 40ch;
         }
     }

@@ -164,6 +164,12 @@ p {
       justify-content: space-around;
 }
 
+@media only screen and (min-width: 1440px) {
+  .projects-section {
+    --side-padding: 10vw;
+  }
+}
+
 .subtitle {
   font-size: clamp(1.25em, 4.25vw, 2.25em);
   font-weight: 300;
@@ -177,7 +183,7 @@ p {
   }
 }
 
-.github-link {
+.icon-link {
   position: relative;
   display: block;
   width: -webkit-fit-content;
@@ -191,11 +197,11 @@ p {
   color: var(--text-light);
 }
 
-.github-link__icon {
+.icon-link__icon {
   font-size: 64px;
 }
 
-.github-link__cover {
+.icon-link__cover {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -205,14 +211,14 @@ p {
   background-color: var(--background);
 }
 
-.github-link__icon, .github-link__cover {
+.icon-link__icon, .icon-link__cover {
   -webkit-transition: -webkit-transform 0.5s ease-out;
   transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
-.github-link__text {
+.icon-link__text {
   position: absolute;
   z-index: -2;
   top: 35%;
@@ -226,19 +232,19 @@ p {
   background-color: var(--text-light);
 }
 
-.github-link:hover .github-link__icon, .github-link:hover .github-link__cover, .github-link:focus .github-link__icon, .github-link:focus .github-link__cover {
+.icon-link:hover .icon-link__icon, .icon-link:hover .icon-link__cover, .icon-link:focus .icon-link__icon, .icon-link:focus .icon-link__cover {
   -webkit-transform: translateX(-56px);
           transform: translateX(-56px);
 }
 
-.github-link:hover .github-link__text, .github-link:focus .github-link__text {
+.icon-link:hover .icon-link__text, .icon-link:focus .icon-link__text {
   left: 0;
   opacity: 1;
 }
 
-.github-link--shorter-translate:hover .github-link__icon,
-.github-link--shorter-translate:hover .github-link__cover, .github-link--shorter-translate:focus .github-link__icon,
-.github-link--shorter-translate:focus .github-link__cover {
+.icon-link--shorter-translate:hover .icon-link__icon,
+.icon-link--shorter-translate:hover .icon-link__cover, .icon-link--shorter-translate:focus .icon-link__icon,
+.icon-link--shorter-translate:focus .icon-link__cover {
   -webkit-transform: translateX(-54px);
           transform: translateX(-54px);
 }
@@ -310,6 +316,7 @@ p {
   }
   .project__content {
     width: 55%;
+    margin-right: 64px;
     min-width: 40ch;
   }
 }

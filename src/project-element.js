@@ -17,14 +17,14 @@ class ProjectElement extends HTMLDivElement {
             code === undefined
                 ? ""
                 : `
-            <a href="${code}" class="github-link">
+            <a href="${code}" class="icon-link">
                 <ion-icon
                     name="logo-github"
-                    class="github-link__icon"
+                    class="icon-link__icon"
                     aria-hidden="true"
                 ></ion-icon>
-                <div class="github-link__cover"></div>
-                <span class="github-link__text">Code</span>
+                <div class="icon-link__cover"></div>
+                <span class="icon-link__text">Code</span>
             </a>`;
 
         let previewElement =
@@ -33,16 +33,16 @@ class ProjectElement extends HTMLDivElement {
                 : `
             <a 
                 href="${preview}"
-                class="github-link github-link--shorter-translate"
+                class="icon-link icon-link--shorter-translate"
             >
                 <span
-                    class="material-icons github-link__icon"
+                    class="material-icons icon-link__icon"
                     aria-hidden="true"
                 >
                     play_circle
                 </span>
-                <div class="github-link__cover"></div>
-                <span class="github-link__text">Preview</span>
+                <div class="icon-link__cover"></div>
+                <span class="icon-link__text">Preview</span>
             </a>`;
 
         this.innerHTML = `
