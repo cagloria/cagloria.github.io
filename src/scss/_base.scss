@@ -81,7 +81,6 @@ h2 {
     font-size: clamp(2.25em, 8vw, 3em);
     margin: 0 0 24px;
     text-align: center;
-    color: var(--primary-400);
     @media only screen and (min-width: 426px) {
         margin-bottom: 40px;
     }
@@ -101,6 +100,11 @@ p {
     max-width: 50ch;
     margin: 1em auto;
     text-align: center;
+}
+
+h2,
+h3 {
+    color: var(--primary-400);
 }
 
 h1,
