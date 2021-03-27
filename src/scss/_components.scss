@@ -101,6 +101,7 @@
 .button-link {
     position: relative;
     bottom: 0;
+    width: fit-content;
     padding: 12px 48px;
     transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in,
         backdrop-filter 0.3s ease-in, bottom 0.2s ease-in;
@@ -114,7 +115,7 @@
         box-shadow: 0 4px 4px #7f7f7f3d;
         backdrop-filter: blur(9px);
     }
-    
+
     &:active {
         bottom: -2px;
         background-color: var(--neutral-300);
@@ -141,8 +142,13 @@
     }
 
     &__links {
-        max-width: 250px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         margin: 0 auto;
+        > *:first-child {
+            margin-bottom: 16px;
+        }
     }
 
     @media only screen and (min-width: 426px) {

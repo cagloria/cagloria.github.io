@@ -17,13 +17,19 @@ class ProjectElement extends HTMLDivElement {
             code === undefined
                 ? ""
                 : `
-            <a href="${code}" class="button-link">GitHub</a>`;
+            <a href="${code}" class="button-link" aria-label="${title} GitHub">
+                GitHub
+            </a>`;
 
         let previewElement =
             preview === undefined
                 ? ""
                 : `
-            <a href="${preview}" class="button-link">Live Demo</a>`;
+            <a href="${preview}"
+                class="button-link"
+                aria-label="${title} live demo">
+                    Live Demo
+            </a>`;
 
         this.innerHTML = `
             <img src="${image}" alt="${alt}" class="project__image" />
@@ -36,7 +42,7 @@ class ProjectElement extends HTMLDivElement {
                 
                 <p><b>Tools:</b> ${tools}</p>
                 
-                <div class="flex-row-justify-center project__links">
+                <div class="project__links">
                     ${previewElement}
                     ${codeElement}
                 </div>
