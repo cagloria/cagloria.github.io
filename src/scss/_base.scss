@@ -79,7 +79,7 @@ h1 {
 
 h2 {
     font-size: clamp(2.25em, 8vw, 3em);
-    margin: 0 0 24px;
+    margin: 0 0 32px;
     text-align: center;
     @media only screen and (min-width: 426px) {
         margin-bottom: 40px;
@@ -87,9 +87,8 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1.5em, 4.5vw, 2em);
+    font-size: clamp(1.875em, 4.5vw, 2em);
     margin: 16px 0;
-    text-align: center;
     @media only screen and (min-width: 426px) {
         margin-bottom: 24px;
     }
@@ -98,8 +97,6 @@ h3 {
 p {
     font-size: 1.125em;
     max-width: 50ch;
-    margin: 1em auto;
-    text-align: center;
 }
 
 h2,

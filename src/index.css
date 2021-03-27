@@ -123,7 +123,7 @@ h1 {
 
 h2 {
   font-size: clamp(2.25em, 8vw, 3em);
-  margin: 0 0 24px;
+  margin: 0 0 32px;
   text-align: center;
 }
 
@@ -134,9 +134,8 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5em, 4.5vw, 2em);
+  font-size: clamp(1.875em, 4.5vw, 2em);
   margin: 16px 0;
-  text-align: center;
 }
 
 @media only screen and (min-width: 426px) {
@@ -148,8 +147,6 @@ h3 {
 p {
   font-size: 1.125em;
   max-width: 50ch;
-  margin: 1em auto;
-  text-align: center;
 }
 
 h2,
@@ -222,6 +219,10 @@ button {
 
 .title-container p {
   margin: 0;
+  text-align: center;
+}
+
+.intro__body {
   text-align: center;
 }
 
@@ -317,9 +318,10 @@ button {
   transition: background-color 0.3s ease-in, bottom 0.2s ease-in, -webkit-box-shadow 0.3s ease-in, -webkit-backdrop-filter 0.3s ease-in;
   transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in, backdrop-filter 0.3s ease-in, bottom 0.2s ease-in;
   transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in, backdrop-filter 0.3s ease-in, bottom 0.2s ease-in, -webkit-box-shadow 0.3s ease-in, -webkit-backdrop-filter 0.3s ease-in;
+  text-align: center;
   text-decoration: none;
   color: var(--neutral-900);
-  border: 1px solid #ebebeb;
+  border: 1px solid var(--neutral-900);
   background-color: transparent;
 }
 
@@ -340,6 +342,8 @@ button {
 }
 
 .project {
+  display: -ms-grid;
+  display: grid;
   margin-bottom: 48px;
 }
 
@@ -347,17 +351,36 @@ button {
   margin-bottom: 0;
 }
 
-.project > * {
-  width: 100%;
-}
-
 .project__image {
-  max-width: 500px;
-  height: 175px;
-  margin-bottom: 24px;
-  border-radius: 16px;
+  width: 100%;
+  height: 134px;
+  margin-bottom: 16px;
+  border-radius: 12px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.project__heading {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.project__date {
+  margin-top: 0;
+  text-align: left;
+}
+
+.project__divider {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  background-color: var(--neutral-500);
+}
+
+.project__description {
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
 .project__links {
@@ -376,6 +399,10 @@ button {
 
 .project__links > *:first-child {
   margin-bottom: 16px;
+}
+
+.project__links > * {
+  width: 50%;
 }
 
 @media only screen and (min-width: 426px) {
@@ -401,11 +428,6 @@ button {
     height: 100%;
     margin-right: 64px;
     margin-bottom: 0;
-  }
-  .project__content {
-    width: 55%;
-    min-width: 40ch;
-    margin-right: 64px;
   }
 }
 

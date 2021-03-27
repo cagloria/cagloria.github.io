@@ -33,19 +33,18 @@ class ProjectElement extends HTMLDivElement {
 
         this.innerHTML = `
             <img src="${image}" alt="${alt}" class="project__image" />
-            <div class="project__content">
-                <h3>${title}</h3>
 
-                <p>${dateRange}</p>
-                
-                <p>${description}</p>
-                
-                <p><b>Tools:</b> ${tools}</p>
-                
-                <div class="project__links">
-                    ${previewElement}
-                    ${codeElement}
-                </div>
+            <h3 class="project__heading">${title}</h3>
+
+            <p class="project__date">${dateRange}</p>
+
+            <div class="project__divider"></div>
+            
+            <p class="project__description">${description}</p>
+            
+            <div class="project__links">
+                ${previewElement}
+                ${codeElement}
             </div>
         `;
     }
