@@ -223,6 +223,7 @@ button {
 }
 
 .intro__body {
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -310,6 +311,15 @@ button {
 .button-link {
   position: relative;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -344,7 +354,7 @@ button {
 .project {
   display: -ms-grid;
   display: grid;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
 }
 
 .project:last-child {
@@ -405,12 +415,74 @@ button {
   width: 50%;
 }
 
-@media only screen and (min-width: 426px) {
+@media only screen and (min-width: 600px) {
   .project {
-    margin-bottom: 96px;
+    margin-bottom: 0;
+    margin-bottom: 64px;
+    -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
   }
   .project__image {
-    height: 250px;
+    max-width: 250px;
+    height: 100%;
+    margin: 0;
+    grid-row: 1 / -1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .project__heading {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .project__date {
+    margin-bottom: 12px;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .project__divider {
+    margin-bottom: 12px;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .project__description {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .project__links {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-row: 5;
+    grid-row: 5;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .project__links > *:first-child {
+    margin: 0 24px 0 0;
+  }
+  .project__links > * {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
