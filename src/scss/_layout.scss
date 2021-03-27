@@ -1,17 +1,13 @@
 .title-section {
-    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .project-container {
     display: flex;
     flex-wrap: wrap;
-}
-
-.projects-section {
-    @media only screen and (min-width: 1440px) {
-        --side-padding: 10vw;
-    }
+    max-width: 830px;
+    margin: 0 auto;
 }

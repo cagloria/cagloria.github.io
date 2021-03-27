@@ -15,30 +15,8 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--neutral-900);
   background: var(--neutral-200);
-}
-
-@media only screen and (min-width: 426px) {
-  body {
-    margin-bottom: 112px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  body {
-    margin-top: 64px;
-    margin-bottom: 124px;
-    --side-padding: 15vw;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  body {
-    --side-padding: 20vw;
-  }
 }
 
 header {
@@ -90,18 +68,23 @@ section {
 }
 
 section:last-child {
-  margin-bottom: 0;
+  padding-bottom: 60px;
 }
 
 @media only screen and (min-width: 426px) {
   section {
-    margin-bottom: 96px;
+    padding-top: 90px;
+    --side-padding: 8vw;
   }
 }
 
 @media only screen and (min-width: 768px) {
   section {
-    margin-bottom: 124px;
+    padding-top: 120px;
+    --side-padding: 10vw;
+  }
+  section:last-child {
+    padding-bottom: 120px;
   }
 }
 
@@ -166,16 +149,16 @@ button {
 }
 
 .title-section {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
 }
 
 .project-container {
@@ -184,12 +167,8 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media only screen and (min-width: 1440px) {
-  .projects-section {
-    --side-padding: 10vw;
-  }
+  max-width: 830px;
+  margin: 0 auto;
 }
 
 .nav__open-btn {
@@ -219,6 +198,7 @@ button {
 }
 
 .intro__body {
+  max-width: 70ch;
   margin: 0 auto;
   text-align: center;
 }
@@ -269,6 +249,7 @@ button {
 .project {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   margin-bottom: 38px;
 }
 
@@ -363,6 +344,9 @@ button {
     grid-column: 2;
   }
   .project__divider {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
     margin-bottom: 0;
     -ms-grid-row: 3;
     grid-row: 3;

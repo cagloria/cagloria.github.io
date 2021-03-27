@@ -24,6 +24,7 @@
 
 .intro {
     &__body {
+        max-width: 70ch;
         margin: 0 auto;
         text-align: center;
     }
@@ -60,6 +61,7 @@
 
 .project {
     display: grid;
+    width: 100%;
     margin-bottom: 38px;
     &:last-child {
         margin-bottom: 0;
@@ -134,6 +136,7 @@
         }
 
         &__divider {
+            align-self: end;
             margin-bottom: 0;
             grid-row: 3;
             grid-column: 2;

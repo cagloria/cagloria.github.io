@@ -1,23 +1,8 @@
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: var(--neutral-900);
     background: var(--neutral-200);
-    @media only screen and (min-width: 426px) {
-        margin-bottom: 112px;
-    }
-
-    @media only screen and (min-width: 1024px) {
-        margin-top: 64px;
-        margin-bottom: 124px;
-        --side-padding: 15vw;
-    }
-
-    @media only screen and (min-width: 1440px) {
-        --side-padding: 20vw;
-    }
 }
 
 header {
@@ -53,15 +38,20 @@ section {
     padding-right: var(--side-padding);
     padding-left: var(--side-padding);
     &:last-child {
-        margin-bottom: 0;
+        padding-bottom: 60px;
     }
 
     @media only screen and (min-width: 426px) {
-        margin-bottom: 96px;
+        padding-top: 90px;
+        --side-padding: 8vw;
     }
 
     @media only screen and (min-width: 768px) {
-        margin-bottom: 124px;
+        padding-top: 120px;
+        --side-padding: 10vw;
+        &:last-child {
+            padding-bottom: 120px;
+        }
     }
 
     @media only screen and (min-width: 1024px) {
