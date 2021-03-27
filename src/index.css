@@ -43,19 +43,19 @@ header {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   header {
     margin-bottom: 62px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   header {
     --side-padding: 15vw;
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
   header {
     --side-padding: 20vw;
   }
@@ -78,7 +78,7 @@ section:last-child {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   section {
     padding-top: 120px;
     --side-padding: 10vw;
@@ -88,13 +88,13 @@ section:last-child {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   section {
     --side-padding: 15vw;
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
   section {
     --side-padding: 20vw;
   }
@@ -112,7 +112,7 @@ h2 {
 
 @media only screen and (min-width: 426px) {
   h2 {
-    margin-bottom: 40px;
+    text-align: left;
   }
 }
 
@@ -201,6 +201,12 @@ button {
   max-width: 70ch;
   margin: 0 auto;
   text-align: center;
+}
+
+@media only screen and (min-width: 426px) {
+  .intro__body {
+    text-align: left;
+  }
 }
 
 .button-link {
@@ -384,7 +390,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .project {
     margin-bottom: 64px;
   }
@@ -478,7 +484,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .skills-ul {
     --gap: 32px;
   }
