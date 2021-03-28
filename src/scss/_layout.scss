@@ -1,7 +1,16 @@
 .title-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
+
+    @media only screen and (min-width: 426px) {
+        align-items: flex-start;
+
+        .main-link {
+            align-self: center;
+        }
+    }
 }
 
 .project-container {

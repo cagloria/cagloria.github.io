@@ -12,6 +12,16 @@
   --side-padding: 5vw;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -27,25 +37,23 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100vw;
-  padding: 22px var(--side-padding);
+  height: 64px;
+  padding: 0 var(--side-padding);
   background-color: var(--neutral-200);
 }
 
 @media only screen and (min-width: 426px) {
   header {
-    margin-bottom: 124px;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  header {
-    margin-bottom: 62px;
+    height: 74px;
   }
 }
 
@@ -157,10 +165,27 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+}
+
+@media only screen and (min-width: 426px) {
+  .title-section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .title-section .main-link {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .project-container {
@@ -213,9 +238,8 @@ button {
 }
 
 .title-container {
-  position: relative;
-  bottom: 150px;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 50%;
 }
 
 .title-container h1 {
@@ -237,6 +261,20 @@ button {
   .title-container p {
     text-align: left;
   }
+}
+
+.main-link {
+  position: absolute;
+  bottom: 39px;
+  width: 64px;
+  height: 64px;
+  display: block;
+  background-image: url("../../assets/icon-down-arrow.svg");
+  background-color: var(--neutral-300);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 .intro__body {
