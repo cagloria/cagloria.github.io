@@ -59,6 +59,7 @@ section {
     }
 
     @media only screen and (min-width: 1441px) {
+        // FIXME: Shorten sections on sides
         --side-padding: 20vw;
     }
 }
@@ -84,7 +85,8 @@ h3 {
     }
 }
 
-p {
+p,
+li {
     font-size: 1.125em;
 }
 
@@ -95,9 +97,13 @@ h3 {
 
 h1,
 h2,
-h3,
-p {
+h3 {
     font-weight: 300;
+    line-height: 150%;
+}
+
+p,
+li {
     line-height: 150%;
 }
 
