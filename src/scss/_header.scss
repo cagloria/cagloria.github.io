@@ -1,0 +1,101 @@
+$transition-duration-type: 0.3s linear;
+
+.logo {
+    top: 99px;
+    width: 60px;
+    height: 60px;
+}
+
+.nav {
+    &__cover {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: transform $transition-duration-type;
+        transform: translateX(150vw);
+        background-color: var(--neutral-100);
+    }
+
+    &__btn {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        transition: background-image $transition-duration-type;
+        border: 0;
+        background-color: transparent;
+        background-image: url("../../assets/icon-menu.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__links {
+        top: 177px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        li {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__text-links {
+        text-align: center;
+        li {
+            margin-bottom: 18px;
+        }
+        a {
+            font-size: 1em;
+            padding: 12px;
+            text-decoration: none;
+            color: var(--neutral-900);
+        }
+    }
+
+    &__social-links {
+        margin-top: 34px;
+        li {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.nav__links,
+.logo {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transition: transform $transition-duration-type;
+    transform: translateX(100vw);
+}
+
+.open-nav {
+    .nav {
+        &__cover {
+            transition: transform $transition-duration-type;
+            transform: translateX(0);
+        }
+        &__btn {
+            background-image: url("../../assets/icon-close.svg");
+        }
+    }
+
+    .logo,
+    .nav__links {
+        transform: translateX(-50%);
+    }
+}

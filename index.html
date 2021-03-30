@@ -9,34 +9,49 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
             rel="stylesheet"
         />
-        <script
-            type="module"
-            src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
-            nomodule=""
-            src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"
-        ></script>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Material+Icons"
-            rel="stylesheet"
-        />
         <link rel="stylesheet" type="text/css" href="./src/index.css" />
+        <script src="./src/index.js"></script>
         <script src="./src/project-element.js"></script>
         <title>C.A. Gloria</title>
     </head>
 
     <body>
         <header>
-            <nav>
-                <button class="nav__open-btn" aria-label="Open nav"></button>
-                <div class="social-links">
-                    <!-- <a
-                        href="https://github.com/cagloria"
-                        aria-label="C A Gloria"
-                    >
-                        <img src="./assets/icon-github.svg" alt="" />
-                    </a> -->
+            <div class="nav__cover"></div>
+            <img
+                src="./assets/icon-logo-initials.svg"
+                alt="C G logo"
+                class="logo"
+            />
+            <nav class="nav nav--open">
+                <button
+                    class="nav__btn"
+                    id="nav-button"
+                    aria-label="Open nav"
+                ></button>
+                <div class="nav__links">
+                    <ul class="nav__text-links nav__ul remove-default-list">
+                        <li><a href="#title-section">Home</a></li>
+                        <li><a href="#intro-section">About</a></li>
+                        <li><a href="#skills-section">Skills</a></li>
+                        <li><a href="#projects-section">Projects</a></li>
+                    </ul>
+                    <ul class="nav__social-links nav__ul remove-default-list">
+                        <li>
+                            <a
+                                href="https://github.com/cagloria"
+                                aria-label="C A Gloria on GitHub"
+                                ><img src="./assets/icon-github.svg" alt=""
+                            /></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.behance.net/cagloria"
+                                aria-label="C A Gloria on Behance"
+                                ><img src="./assets/icon-behance.svg" alt="" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -72,7 +87,7 @@
                 id="skills-section"
             >
                 <h2>My Skills</h2>
-                <ul class="skills-ul">
+                <ul class="skills-ul remove-default-list">
                     <li><img src="./assets/icon-react.svg" alt="" />React</li>
                     <li><img src="./assets/icon-html.svg" alt="" />HTML</li>
                     <li><img src="./assets/icon-css.svg" alt="" />CSS</li>

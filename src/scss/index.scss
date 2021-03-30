@@ -4,15 +4,16 @@
     --neutral-200: #242424;
     --neutral-300: #404040;
     --neutral-400: #636363;
-    --neutral-500: #7E7E7E;
-    --neutral-600: #9A9A9A;
-    --neutral-700: #B5B5B5;
-    --neutral-800: #D0D0D0;
-    --neutral-900: #EBEBEB;
+    --neutral-500: #7e7e7e;
+    --neutral-600: #9a9a9a;
+    --neutral-700: #b5b5b5;
+    --neutral-800: #d0d0d0;
+    --neutral-900: #ebebeb;
     --side-padding: 5vw;
 }
 
 @import "base";
 @import "layout";
+@import "header";
 @import "components";
 @import "utility";
