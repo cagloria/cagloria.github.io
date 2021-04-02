@@ -74,14 +74,11 @@ header {
     &__text-links {
         top: 177px;
         text-align: center;
-
         li {
             margin-bottom: 18px;
         }
         a {
             font-size: 0.8889em;
-            width: 45px;
-            height: 45px;
             padding: 12px;
             text-decoration: none;
             color: var(--neutral-900);
@@ -90,6 +87,15 @@ header {
 
     &__social-links {
         top: 403px;
+
+        a {
+            width: fit-content;
+            height: fit-content;
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
         li:first-child {
             margin-bottom: 32px;
         }
@@ -117,6 +123,23 @@ header {
                 margin: 0 32px 0 0;
             }
         }
+    }
+}
+
+.open-nav {
+    .nav {
+        &__cover {
+            transition: transform $nav-transition-duration-type;
+            transform: translateX(0);
+        }
+        &__btn {
+            background-image: url("../../assets/icon-close.svg");
+        }
+    }
+
+    .logo,
+    .nav__ul {
+        transform: translateX(-50%);
     }
 }
 
@@ -156,14 +179,16 @@ header {
 
         &__ul {
             position: unset;
+            top: unset;
+            left: unset;
+            align-items: center;
             flex-direction: row;
             transform: unset;
         }
 
         &__text-links {
+            flex: 1;
             justify-content: center;
-            width: 100%;
-
             li {
                 margin: 0;
             }
@@ -173,23 +198,44 @@ header {
             li:first-child {
                 margin: 0 24px 0 0;
             }
+
+            a img {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 }
 
-.open-nav {
+@media only screen and (min-width: 769px) {
     .nav {
-        &__cover {
-            transition: transform $nav-transition-duration-type;
-            transform: translateX(0);
-        }
-        &__btn {
-            background-image: url("../../assets/icon-close.svg");
-        }
-    }
+        justify-content: flex-end;
 
-    .logo,
-    .nav__ul {
-        transform: translateX(-50%);
+        &__text-links {
+            flex: unset;
+
+            li {
+                margin-left: 42px;
+            }
+        }
+
+        &__social-links {
+            position: fixed;
+            right: 5vw;
+            bottom: 32px;
+            flex-direction: column;
+            li:first-child {
+                margin: 0;
+            }
+
+            li:last-child {
+                margin-top: 32px;
+            }
+
+            a img {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }
