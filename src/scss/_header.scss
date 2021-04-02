@@ -1,9 +1,13 @@
-$transition-duration-type: 0.3s linear;
+$nav-transition-duration-type: 0.3s linear;
+$landscape-height: 580px;
 
 .logo {
     top: 99px;
     width: 60px;
     height: 60px;
+    @media screen and (max-height: $landscape-height) {
+        top: 54px;
+    }
 }
 
 .nav {
@@ -14,7 +18,7 @@ $transition-duration-type: 0.3s linear;
         left: 0;
         width: 100vw;
         height: 100vh;
-        transition: transform $transition-duration-type;
+        transition: transform $nav-transition-duration-type;
         transform: translateX(150vw);
         background-color: var(--neutral-100);
     }
@@ -26,7 +30,7 @@ $transition-duration-type: 0.3s linear;
         width: 45px;
         height: 45px;
         padding: 0;
-        transition: background-image $transition-duration-type;
+        transition: background-image $nav-transition-duration-type;
         border: 0;
         background-color: transparent;
         background-image: url("../../assets/icon-menu.svg");
@@ -38,18 +42,21 @@ $transition-duration-type: 0.3s linear;
         top: 177px;
         display: flex;
         flex-direction: column;
-        width: 50%;
         margin: 0 auto;
+        @media screen and (max-height: $landscape-height) {
+            top: 147px;
+        }
     }
 
     &__ul {
         display: flex;
         align-items: center;
         flex-direction: column;
-        li {
-            &:last-child {
-                margin-bottom: 0;
-            }
+        @media screen and (max-height: $landscape-height) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 13w;
         }
     }
 
@@ -67,9 +74,16 @@ $transition-duration-type: 0.3s linear;
     }
 
     &__social-links {
-        margin-top: 34px;
-        li {
+        margin-top: 22px;
+        li:first-child {
             margin-bottom: 32px;
+        }
+
+        @media screen and (max-height: $landscape-height) {
+            margin-top: 24px;
+            li:first-child {
+                margin: 0 32px 0 0;
+            }
         }
     }
 }
@@ -79,14 +93,14 @@ $transition-duration-type: 0.3s linear;
     position: absolute;
     left: 50%;
     margin-right: -50%;
-    transition: transform $transition-duration-type;
+    transition: transform $nav-transition-duration-type;
     transform: translateX(100vw);
 }
 
 .open-nav {
     .nav {
         &__cover {
-            transition: transform $transition-duration-type;
+            transition: transform $nav-transition-duration-type;
             transform: translateX(0);
         }
         &__btn {

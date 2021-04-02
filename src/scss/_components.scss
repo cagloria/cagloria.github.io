@@ -1,3 +1,5 @@
+$landscape-height: 580px;
+
 .title-container {
     position: absolute;
     bottom: 50%;
@@ -19,6 +21,10 @@
             text-align: left;
         }
     }
+
+    @media only screen and (max-height: $landscape-height) and (orientation: landscape) {
+        bottom: 35%;
+    }
 }
 
 .main-link {
@@ -33,6 +39,9 @@
     background-image: url("../../assets/icon-down-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
+    @media only screen and (max-height: $landscape-height) and (orientation: landscape) {
+        bottom: 24px;
+    }
 }
 
 .intro {
@@ -79,7 +88,6 @@
 }
 
 .project {
-    // FIXME: Image too large on desktop, causing heading, date, and divider to be spread too far
     display: grid;
     width: 100%;
     margin-bottom: 38px;
