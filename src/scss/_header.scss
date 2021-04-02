@@ -1,13 +1,36 @@
 $nav-transition-duration-type: 0.3s linear;
-$landscape-height: 580px;
+
+header {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    padding: 0 var(--side-padding);
+    background-color: var(--neutral-200);
+    @media only screen and (min-width: 1025px) {
+        --side-padding: 15vw;
+    }
+
+    @media only screen and (min-width: 1441px) {
+        --side-padding: 20vw;
+    }
+}
 
 .logo {
+    position: absolute;
     top: 99px;
+    left: 50%;
     width: 60px;
     height: 60px;
-    @media screen and (max-height: $landscape-height) {
-        top: 54px;
-    }
+    margin-right: -50%;
+    transition: transform $nav-transition-duration-type;
+    transform: translateX(100vw);
 }
 
 .nav {
@@ -38,35 +61,27 @@ $landscape-height: 580px;
         background-position: center;
     }
 
-    &__links {
-        top: 177px;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        @media screen and (max-height: $landscape-height) {
-            top: 147px;
-        }
-    }
-
     &__ul {
+        position: absolute;
+        left: 50%;
         display: flex;
         align-items: center;
         flex-direction: column;
-        @media screen and (max-height: $landscape-height) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0 13w;
-        }
+        transition: transform $nav-transition-duration-type;
+        transform: translateX(100vw);
     }
 
     &__text-links {
+        top: 177px;
         text-align: center;
+
         li {
             margin-bottom: 18px;
         }
         a {
-            font-size: 1em;
+            font-size: 0.8889em;
+            width: 45px;
+            height: 45px;
             padding: 12px;
             text-decoration: none;
             color: var(--neutral-900);
@@ -74,13 +89,30 @@ $landscape-height: 580px;
     }
 
     &__social-links {
-        margin-top: 22px;
+        top: 403px;
         li:first-child {
             margin-bottom: 32px;
         }
+    }
+}
 
-        @media screen and (max-height: $landscape-height) {
-            margin-top: 24px;
+@media screen and (max-height: 580px) and (orientation: landscape) {
+    .logo {
+        top: 54px;
+    }
+    .nav {
+        &__ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__text-links {
+            top: 147px;
+        }
+
+        &__social-links {
+            top: 240px;
             li:first-child {
                 margin: 0 32px 0 0;
             }
@@ -88,13 +120,61 @@ $landscape-height: 580px;
     }
 }
 
-.nav__links,
-.logo {
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transition: transform $nav-transition-duration-type;
-    transform: translateX(100vw);
+@media only screen and (min-width: 580px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 74px;
+    }
+
+    .logo {
+        position: relative;
+        top: unset;
+        left: unset;
+        width: 32px;
+        height: 32px;
+        margin-right: 0;
+        transition: unset;
+        transform: unset;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 32px);
+        * {
+            transition: unset;
+        }
+
+        &__cover {
+            transition: unset;
+        }
+
+        &__btn {
+            right: 200vw;
+        }
+
+        &__ul {
+            position: unset;
+            flex-direction: row;
+            transform: unset;
+        }
+
+        &__text-links {
+            justify-content: center;
+            width: 100%;
+
+            li {
+                margin: 0;
+            }
+        }
+
+        &__social-links {
+            li:first-child {
+                margin: 0 24px 0 0;
+            }
+        }
+    }
 }
 
 .open-nav {
@@ -109,7 +189,7 @@ $landscape-height: 580px;
     }
 
     .logo,
-    .nav__links {
+    .nav__ul {
         transform: translateX(-50%);
     }
 }
