@@ -495,7 +495,9 @@ header {
 
 .title-container {
   position: absolute;
-  bottom: 50%;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .title-container h1 {
@@ -510,18 +512,9 @@ header {
 }
 
 @media only screen and (min-width: 426px) {
-  .title-container {
-    margin: unset;
-  }
   .title-container h1,
   .title-container p {
     text-align: left;
-  }
-}
-
-@media only screen and (max-height: 580px) and (orientation: landscape) {
-  .title-container {
-    bottom: 35%;
   }
 }
 

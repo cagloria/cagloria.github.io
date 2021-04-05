@@ -2,7 +2,8 @@ $landscape-height: 580px;
 
 .title-container {
     position: absolute;
-    bottom: 50%;
+    top: 45%;
+    transform: translateY(-50%);
     h1 {
         margin: 0 0 18px;
         text-align: center;
@@ -14,16 +15,10 @@ $landscape-height: 580px;
     }
 
     @media only screen and (min-width: 426px) {
-        margin: unset;
-
         h1,
         p {
             text-align: left;
         }
-    }
-
-    @media only screen and (max-height: $landscape-height) and (orientation: landscape) {
-        bottom: 35%;
     }
 }
 
