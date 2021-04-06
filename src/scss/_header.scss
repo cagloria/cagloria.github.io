@@ -13,13 +13,6 @@ header {
     height: 64px;
     padding: 0 var(--side-padding);
     background-color: var(--neutral-200);
-    @media only screen and (min-width: 1025px) {
-        --side-padding: 15vw;
-    }
-
-    @media only screen and (min-width: 1441px) {
-        --side-padding: 20vw;
-    }
 }
 
 .logo {
@@ -221,7 +214,7 @@ header {
 
         &__social-links {
             position: fixed;
-            right: 5vw;
+            right: calc(var(--side-padding) / 3);
             bottom: 32px;
             flex-direction: column;
             li:first-child {

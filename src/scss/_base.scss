@@ -13,6 +13,28 @@ body {
     background: var(--neutral-200);
 }
 
+:root {
+    @media only screen and (min-width: 426px) {
+        --side-padding: 8vw;
+    }
+
+    @media only screen and (min-width: 769px) {
+        --side-padding: 10vw;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        --side-padding: 15vw;
+    }
+
+    @media only screen and (min-width: 1441px) {
+        --side-padding: 20vw;
+    }
+
+    @media only screen and (min-width: 2000px) {
+        --side-padding: 30vw;
+    }
+}
+
 section {
     padding-top: 70px;
     padding-right: var(--side-padding);
@@ -23,23 +45,13 @@ section {
 
     @media only screen and (min-width: 426px) {
         padding-top: 90px;
-        --side-padding: 8vw;
     }
 
     @media only screen and (min-width: 769px) {
         padding-top: 120px;
-        --side-padding: 10vw;
         &:last-child {
             padding-bottom: 120px;
         }
-    }
-
-    @media only screen and (min-width: 1025px) {
-        --side-padding: 15vw;
-    }
-
-    @media only screen and (min-width: 1441px) {
-        --side-padding: 20vw;
     }
 }
 
