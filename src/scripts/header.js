@@ -15,9 +15,11 @@ function handleMediaChange(event) {
 
     if (event.matches) {
         navButton.setAttribute("aria-hidden", "true");
+        navButton.setAttribute("tabindex", "-1");
         openNav();
     } else {
         navButton.setAttribute("aria-hidden", "false");
+        navButton.setAttribute("tabindex", "0");
         closeNav();
     }
 }
@@ -52,17 +54,12 @@ window.onscroll = function () {
 window.onload = function () {
     const navButton = document.getElementById("nav-button");
     const navLi = document.querySelectorAll("nav li");
-    const navLinks = document.querySelectorAll("nav a");
-
-    mediaQuery580.addEventListener("change", handleMediaChange);
-    handleMediaChange(mediaQuery580);
 
     navButton.addEventListener("click", toggleNav);
     navLi.forEach((li) => {
         li.setAttribute("role", "none");
     });
-    navLinks.forEach((link) => {
-        link.setAttribute("tabindex", "-1");
-        link.setAttribute("role", "menuitem");
-    });
+
+    mediaQuery580.addEventListener("change", handleMediaChange);
+    handleMediaChange(mediaQuery580);
 };
