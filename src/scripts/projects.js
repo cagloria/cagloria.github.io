@@ -128,6 +128,18 @@ var PROJECTS = (() => {
 
 function displayDevProjects() {
     const projectContainer = document.getElementById("project-container");
+    const currentProjects = document.querySelectorAll(
+        "#project-container > div.project"
+    );
+    const devBtn = document.getElementById("dev-category-btn");
+    const designBtn = document.getElementById("design-category-btn");
+
+    devBtn.classList.add("category-button--active");
+    designBtn.classList.remove("category-button--active");
+
+    currentProjects.forEach((element) => {
+        element.remove();
+    });
 
     PROJECTS.getDevProjects().forEach((obj) => {
         projectContainer.appendChild(obj.element);
@@ -136,6 +148,18 @@ function displayDevProjects() {
 
 function displayDesignProjects() {
     const projectContainer = document.getElementById("project-container");
+    const currentProjects = document.querySelectorAll(
+        "#project-container > div.project"
+    );
+    const devBtn = document.getElementById("dev-category-btn");
+    const designBtn = document.getElementById("design-category-btn");
+
+    devBtn.classList.remove("category-button--active");
+    designBtn.classList.add("category-button--active");
+
+    currentProjects.forEach((element) => {
+        element.remove();
+    });
 
     PROJECTS.getDesignProjects().forEach((obj) => {
         projectContainer.appendChild(obj.element);
@@ -143,5 +167,11 @@ function displayDesignProjects() {
 }
 
 window.onload = function () {
+    const devBtn = document.getElementById("dev-category-btn");
+    const designBtn = document.getElementById("design-category-btn");
+
     displayDevProjects();
+
+    devBtn.addEventListener("click", displayDevProjects);
+    designBtn.addEventListener("click", displayDesignProjects);
 };
