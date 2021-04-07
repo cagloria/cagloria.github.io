@@ -71,7 +71,7 @@ const designProject = (image, imgAlt, title, date, desc, link) => {
 var PROJECTS = (() => {
     let _devProjects = [
         devProject(
-            "../../assets/project-image-countries.jpg",
+            "../../assets/projects/cover-countries.jpg",
             "Screenshot of the Rest Countries API Challenge project, showing the flags and names of various countries",
             "REST Countries API Challenge",
             "July 2020",
@@ -80,7 +80,7 @@ var PROJECTS = (() => {
             "https://github.com/cagloria/rest-countries-api"
         ),
         devProject(
-            "../../assets/project-image-url.jpg",
+            "../../assets/projects/cover-url.jpg",
             "Screenshot of the URL Shortening API Challenge project, showing the project's landing page and input field",
             "Shortly URL Shortening API Challenge",
             "July 2020",
@@ -89,7 +89,7 @@ var PROJECTS = (() => {
             "https://github.com/cagloria/url-shortening-api"
         ),
         devProject(
-            "../../assets/project-image-easybank.jpg",
+            "../../assets/projects/cover-easybank.jpg",
             "Screenshot of the Easybank Landing Page challenge project",
             "Easybank Landing Page",
             "June 2020",
@@ -98,7 +98,7 @@ var PROJECTS = (() => {
             "https://github.com/cagloria/easybank-landing-page"
         ),
         devProject(
-            "../../assets/project-image-job-listing.jpg",
+            "../../assets/projects/cover-jobs.jpg",
             "Screenshot of the Job Listing challenge project, showing several job listings",
             "Job Listings Challenge",
             "March 2020",
@@ -110,7 +110,7 @@ var PROJECTS = (() => {
 
     let _designProjects = [
         designProject(
-            "",
+            "../../assets/projects/cover-goals.jpg",
             "Screenshot of the Goals Tracker design, featuring the home screen",
             "Goals Tracker",
             "Apil 2021",
@@ -126,10 +126,22 @@ var PROJECTS = (() => {
     return { getDevProjects, getDesignProjects };
 })();
 
-window.onload = function () {
+function displayDevProjects() {
+    const projectContainer = document.getElementById("project-container");
+
+    PROJECTS.getDevProjects().forEach((obj) => {
+        projectContainer.appendChild(obj.element);
+    });
+}
+
+function displayDesignProjects() {
     const projectContainer = document.getElementById("project-container");
 
     PROJECTS.getDesignProjects().forEach((obj) => {
         projectContainer.appendChild(obj.element);
     });
+}
+
+window.onload = function () {
+    displayDevProjects();
 };
