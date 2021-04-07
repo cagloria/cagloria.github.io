@@ -45,6 +45,29 @@ const devProject = (
     return { element };
 };
 
+const designProject = (image, imgAlt, title, date, desc, link) => {
+    const element = document.createElement("div");
+    element.classList.add("project");
+
+    element.innerHTML = `
+            <img src="${image}" alt="${imgAlt}" class="project__image" />
+            <h3 class="project__heading">${title}</h3>
+            <p class="project__date">${date}</p>
+            <div class="project__divider"></div>
+            <p class="project__description">${desc}</p>
+            <div class="project__links">
+                <a 
+                    href="${link}" 
+                    class="button-link" 
+                    aria-label="${title} design"
+                    >Design
+                </a>
+            </div>
+        `;
+
+    return { element };
+};
+
 var PROJECTS = (() => {
     let _devProjects = [
         devProject(
@@ -85,15 +108,28 @@ var PROJECTS = (() => {
         ),
     ];
 
+    let _designProjects = [
+        designProject(
+            "",
+            "Screenshot of the Goals Tracker design, featuring the home screen",
+            "Goals Tracker",
+            "Apil 2021",
+            "Tracks daily and weekly goals, displaying a progress bar and how much time or instances remain. Allows the user to track a goal by time, making progress through a stopwatch or pomodoro, or to create a goal by count, making progress through increments.",
+            "https://www.behance.net/gallery/116895337/Goals-Tracker"
+        ),
+    ];
+
     const getDevProjects = () => _devProjects;
 
-    return { getDevProjects };
+    const getDesignProjects = () => _designProjects;
+
+    return { getDevProjects, getDesignProjects };
 })();
 
 window.onload = function () {
     const projectContainer = document.getElementById("project-container");
 
-    PROJECTS.getDevProjects().forEach((obj) => {
+    PROJECTS.getDesignProjects().forEach((obj) => {
         projectContainer.appendChild(obj.element);
     });
 };
