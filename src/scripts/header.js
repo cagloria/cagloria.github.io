@@ -1,13 +1,5 @@
 const mediaQuery580 = window.matchMedia("(min-width: 580px)");
 
-function toggleNav() {
-    const header = document.getElementsByTagName("header")[0];
-    const openNavClass = "open-nav";
-
-    header.classList.toggle(openNavClass);
-    header.classList.contains(openNavClass) ? openNav() : closeNav();
-}
-
 function handleMediaChange(event) {
     const header = document.getElementsByTagName("header")[0];
     const navButton = document.getElementById("nav-button");
@@ -22,6 +14,14 @@ function handleMediaChange(event) {
         navButton.setAttribute("tabindex", "0");
         closeNav();
     }
+}
+
+function toggleNav() {
+    const header = document.getElementsByTagName("header")[0];
+    const openNavClass = "open-nav";
+
+    header.classList.toggle(openNavClass);
+    header.classList.contains(openNavClass) ? openNav() : closeNav();
 }
 
 function openNav() {
@@ -46,12 +46,7 @@ function closeNav() {
     });
 }
 
-window.onscroll = function () {
-    const header = document.getElementsByTagName("header")[0];
-    header.classList.contains("open-nav") ? closeNav() : null;
-};
-
-window.onload = function () {
+export function setupHeader() {
     const navButton = document.getElementById("nav-button");
     const navLi = document.querySelectorAll("nav li");
 
@@ -62,4 +57,12 @@ window.onload = function () {
 
     mediaQuery580.addEventListener("change", handleMediaChange);
     handleMediaChange(mediaQuery580);
-};
+}
+
+export function closeNavOnScroll() {
+    const header = document.getElementsByTagName("header")[0];
+    if (header.classList.contains("open-nav")) {
+        header.classList.remove("open-nav");
+        closeNav();
+    }
+}

@@ -166,12 +166,12 @@ function displayDesignProjects() {
     });
 }
 
-window.onload = function () {
+export function loadProjects() {
     const devBtn = document.getElementById("dev-category-btn");
     const designBtn = document.getElementById("design-category-btn");
 
-    displayDevProjects();
-
     devBtn.addEventListener("click", displayDevProjects);
     designBtn.addEventListener("click", displayDesignProjects);
-};
+
+    displayDevProjects();
+}
