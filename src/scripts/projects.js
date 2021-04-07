@@ -16,7 +16,7 @@ const devProject = (
             : `<a 
                 href="${codeLink}" 
                 class="button-link" 
-                aria-label="${title} GitHub"
+                aria-label="${title} on GitHub"
                 >GitHub
             </a>`;
 
@@ -59,8 +59,8 @@ const designProject = (image, imgAlt, title, date, desc, link) => {
                 <a 
                     href="${link}" 
                     class="button-link" 
-                    aria-label="${title} design"
-                    >Design
+                    aria-label="${title} on Behance"
+                    >Behance
                 </a>
             </div>
         `;

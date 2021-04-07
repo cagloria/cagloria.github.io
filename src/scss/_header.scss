@@ -94,14 +94,6 @@ header {
     &__social-links {
         top: 403px;
 
-        a {
-            width: fit-content;
-            height: fit-content;
-            img {
-                width: 45px;
-                height: 45px;
-            }
-        }
         li:first-child {
             margin-bottom: 32px;
         }
