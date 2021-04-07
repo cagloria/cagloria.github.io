@@ -334,9 +334,23 @@ header {
 
 .nav__text-links a {
   font-size: 0.8889em;
-  padding: 12px;
+  margin: 12px;
+  padding: 2px 4px;
+  -webkit-transition: border-bottom-color 0.3s linear, background-color 0.3s linear, color 0.3s linear;
+  transition: border-bottom-color 0.3s linear, background-color 0.3s linear, color 0.3s linear;
   text-decoration: none;
   color: var(--neutral-900);
+  border-bottom: 2px solid transparent;
+}
+
+.nav__text-links a:hover {
+  border-bottom-color: var(--primary-400);
+}
+
+.nav__text-links a:active {
+  color: var(--neutral-100);
+  border-radius: 2px;
+  background-color: var(--primary-400);
 }
 
 .nav__social-links {
