@@ -11,7 +11,7 @@
         />
         <link rel="stylesheet" type="text/css" href="./src/index.css" />
         <script src="./src/scripts/header.js"></script>
-        <script src="./src/scripts/project-element.js"></script>
+        <script src="./src/scripts/projects.js"></script>
         <title>C.A. Gloria</title>
     </head>
 
@@ -116,59 +116,7 @@
             <section class="projects-section" id="projects-section">
                 <h2>My Projects</h2>
 
-                <div class="project-container">
-                    <div
-                        class="project"
-                        is="project-element"
-                        data-image="./assets/project-image-countries.jpg"
-                        data-alt="Screenshot of the Rest Countries API Challenge project, showing the flags and names of various countries"
-                        data-title="REST Countries API Challenge"
-                        data-date="July 2020"
-                        data-description="Sends a GET request to the REST Countries API and displays country data. Allows the user to filter countries by text and region. Contains a responsive design and a theme toggle."
-                        data-tools="React, JavaScript, Sass, HTML, API"
-                        data-preview="https://cagloria.github.io/rest-countries-api/"
-                        data-code="https://github.com/cagloria/rest-countries-api"
-                    ></div>
-
-                    <div
-                        class="project"
-                        is="project-element"
-                        data-image="./assets/project-image-url.jpg"
-                        data-alt="Screenshot of the URL Shortening API Challenge project, showing the project's landing page and input field"
-                        data-title="Shortly URL Shortening API Challenge"
-                        data-date="July 2020"
-                        data-description="Sends a POST request containing a URL to the shrtcode API and displays a shortened URL. Contains a responsive design."
-                        data-tools="React, JavaScript, jQuery, Sass, API, HTML"
-                        data-preview="https://cagloria.github.io/url-shortening-api/"
-                        data-code="https://github.com/cagloria/url-shortening-api"
-                    ></div>
-
-                    <div
-                        class="project"
-                        is="project-element"
-                        data-image="./assets/project-image-easybank.jpg"
-                        data-alt="Screenshot of the Easybank Landing Page challenge project"
-                        data-title="Easybank Landing Page"
-                        data-date="June 2020"
-                        data-description="A responsive landing page for a fictional banking app."
-                        data-tools="JavaScript, jQuery, Sass, HTML"
-                        data-preview="https://cagloria.github.io/easybank-landing-page/"
-                        data-code="https://github.com/cagloria/easybank-landing-page"
-                    ></div>
-
-                    <div
-                        class="project"
-                        is="project-element"
-                        data-image="./assets/project-image-job-listing.jpg"
-                        data-alt="Screenshot of the Job Listing challenge project, showing several job listings"
-                        data-title="Job Listings Challenge"
-                        data-date="March 2020"
-                        data-description="Displays job listings and allows the user to filter them based on categories. Features a responsive design."
-                        data-tools="JavaScript, jQuery, Sass, HTML"
-                        data-preview="https://cagloria.github.io/static-job-listings/"
-                        data-code="https://github.com/cagloria/static-job-listings"
-                    ></div>
-                </div>
+                <div class="project-container" id="project-container"></div>
             </section>
         </main>
     </body>
