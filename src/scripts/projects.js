@@ -113,7 +113,7 @@ var PROJECTS = (() => {
             "../../assets/projects/cover-goals.jpg",
             "Screenshot of the Goals Tracker design, featuring the home screen",
             "Goals Tracker",
-            "Apil 2021",
+            "April 2021",
             "Tracks daily and weekly goals, displaying a progress bar and how much time or instances remain. Allows the user to track a goal by time, making progress through a stopwatch or pomodoro, or to create a goal by count, making progress through increments.",
             "https://www.behance.net/gallery/116895337/Goals-Tracker"
         ),
