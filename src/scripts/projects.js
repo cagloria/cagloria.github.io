@@ -71,6 +71,15 @@ const designProject = (image, imgAlt, title, date, desc, link) => {
 var PROJECTS = (() => {
     let _devProjects = [
         devProject(
+            "../../assets/projects/cover-weather.jpg",
+            "The home screen of the weather app dseign on a laptop, tablet, and phone",
+            "Weather App",
+            "May 2021",
+            "Fetches data from the OpenWeather API to display the current weather of any city, the sunrise/sunset in local time, and the 3-day forecast. Allows the user to change the temperature scale with a toggle. Uses styled-components to change the color theme depending on if it's daytime or nighttime in the selected city.",
+            undefined,
+            "https://github.com/cagloria/weather-app"
+        ),
+        devProject(
             "../../assets/projects/cover-countries.jpg",
             "Screenshot of the Rest Countries API Challenge project, showing the flags and names of various countries",
             "REST Countries API Challenge",
@@ -109,6 +118,14 @@ var PROJECTS = (() => {
     ];
 
     let _designProjects = [
+        designProject(
+            "../../assets/projects/cover-weather.jpg",
+            "The home screen of the weather app dseign on a laptop, tablet, and phone",
+            "Weather App",
+            "May 2021",
+            "Shows the current weather of any city, the sunrise/sunset in local time, and the 3-day forecast. Features a temperature scale toggle. The app's color theme reflects if it's daytime or nighttime in the city.",
+            "https://www.behance.net/gallery/119018551/Weather-App"
+        ),
         designProject(
             "../../assets/projects/cover-goals.jpg",
             "Screenshot of the Goals Tracker design, featuring the home screen",
