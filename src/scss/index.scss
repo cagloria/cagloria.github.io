@@ -7,11 +7,14 @@
     --text: #f5f5f5;
 }
 
+$font-body: "PT Sans", sans-serif;
+$font-header: "Roboto Condensed", sans-serif;
 $gradient: linear-gradient(90deg, #4acafd 0%, #b7a2fb 51.04%, #ff729f 100%);
 
 @import "base";
-@import "layout";
 @import "header";
 @import "intro";
+@import "skills";
+@import "projects";
 @import "components";
 @import "utility";
