@@ -1,3 +1,6 @@
+$font-body: "PT Sans", sans-serif;
+$font-header: "Roboto Condensed", sans-serif;
+
 html {
     scroll-behavior: smooth;
 
@@ -7,10 +10,10 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: $font-body;
     margin: 0;
-    color: var(--neutral-900);
-    background: var(--neutral-200);
+    color: var(--text);
+    background: var(--background);
 }
 
 :root {
@@ -37,8 +40,6 @@ body {
 
 section {
     padding-top: 70px;
-    padding-right: var(--side-padding);
-    padding-left: var(--side-padding);
     &:last-child {
         padding-bottom: 60px;
     }
@@ -55,12 +56,20 @@ section {
     }
 }
 
+h1,
+h2,
+h3 {
+    font-family: $font-header;
+    font-weight: 300;
+    line-height: 150%;
+}
+
 h1 {
-    font-size: clamp(3em, 10vw, 4.5em);
+    font-size: clamp(5em, 10vw, 6em);
 }
 
 h2 {
-    font-size: clamp(2.25em, 7vw, 3em);
+    font-size: clamp(3.75em, 7vw, 6em);
     margin: 0 0 32px;
     text-align: center;
     @media only screen and (min-width: 426px) {
@@ -79,25 +88,18 @@ h3 {
 p,
 li {
     font-size: 1.125em;
-}
-
-h2,
-h3 {
-    color: var(--primary-400);
-}
-
-h1,
-h2,
-h3 {
-    font-weight: 300;
-    line-height: 150%;
-}
-
-p,
-li {
     line-height: 150%;
 }
 
 button {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+main {
+    padding: 0 var(--side-padding) 72px var(--side-padding);
 }

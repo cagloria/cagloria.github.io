@@ -1,19 +1,17 @@
 :root {
-    --primary-400: #2fb2d0;
-    --neutral-100: #121212;
-    --neutral-200: #242424;
-    --neutral-300: #404040;
-    --neutral-400: #636363;
-    --neutral-500: #7e7e7e;
-    --neutral-600: #9a9a9a;
-    --neutral-700: #b5b5b5;
-    --neutral-800: #d0d0d0;
-    --neutral-900: #ebebeb;
     --side-padding: 5vw;
+    --primary: #4acafd;
+    --secondary: #8c95ff;
+    --tertiary: #ff729f;
+    --background: #2d2d2d;
+    --text: #f5f5f5;
 }
 
+$gradient: linear-gradient(90deg, #4acafd 0%, #b7a2fb 51.04%, #ff729f 100%);
+
 @import "base";
-@import "utility";
 @import "layout";
 @import "header";
+@import "intro";
 @import "components";
+@import "utility";
