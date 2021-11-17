@@ -55,26 +55,12 @@ body {
 }
 
 section {
-  padding-top: 70px;
+  padding-top: 36px;
+  padding-bottom: 72px;
 }
 
 section:last-child {
   padding-bottom: 60px;
-}
-
-@media only screen and (min-width: 426px) {
-  section {
-    padding-top: 90px;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  section {
-    padding-top: 120px;
-  }
-  section:last-child {
-    padding-bottom: 120px;
-  }
 }
 
 h1,
@@ -90,19 +76,39 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(3.75em, 7vw, 6em);
+  font-size: 3em;
+  position: relative;
   margin: 0 0 32px;
-  text-align: center;
 }
 
-@media only screen and (min-width: 426px) {
-  h2 {
-    text-align: left;
+h2::before {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  display: block;
+  width: 50%;
+  height: 4px;
+  content: "";
+  border-radius: 4px;
+  background-color: var(--primary);
+  background-image: -webkit-gradient(linear, left top, right top, from(#4acafd), color-stop(51.04%, #b7a2fb), to(#ff729f));
+  background-image: linear-gradient(90deg, #4acafd 0%, #b7a2fb 51.04%, #ff729f 100%);
+}
+
+@media only screen and (min-width: 600px) {
+  h2::before {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  h2::before {
+    width: 25%;
   }
 }
 
 h3 {
-  font-size: clamp(1.875em, 4.5vw, 2em);
+  font-size: 4.5em;
   margin: 16px 0;
 }
 

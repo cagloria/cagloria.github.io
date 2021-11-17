@@ -39,20 +39,10 @@ body {
 }
 
 section {
-    padding-top: 70px;
+    padding-top: 36px;
+    padding-bottom: 72px;
     &:last-child {
         padding-bottom: 60px;
-    }
-
-    @media only screen and (min-width: 426px) {
-        padding-top: 90px;
-    }
-
-    @media only screen and (min-width: 769px) {
-        padding-top: 120px;
-        &:last-child {
-            padding-bottom: 120px;
-        }
     }
 }
 
@@ -69,16 +59,32 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(3.75em, 7vw, 6em);
+    font-size: 3em;
+    position: relative;
     margin: 0 0 32px;
-    text-align: center;
-    @media only screen and (min-width: 426px) {
-        text-align: left;
+    &::before {
+        position: absolute;
+        top: -16px;
+        left: 0;
+        display: block;
+        width: 50%;
+        height: 4px;
+        content: "";
+        border-radius: 4px;
+        background-color: var(--primary);
+        background-image: $gradient;
+        @media only screen and (min-width: 600px) {
+            width: 33%;
+        }
+
+        @media only screen and (min-width: 769px) {
+            width: 25%;
+        }
     }
 }
 
 h3 {
-    font-size: clamp(1.875em, 4.5vw, 2em);
+    font-size: 4.5em;
     margin: 16px 0;
     @media only screen and (min-width: 426px) {
         margin-bottom: 24px;
