@@ -354,11 +354,26 @@ main {
   gap: 16px;
 }
 
+.project,
+.project--design__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
 .project {
   padding: 24px;
+  text-align: center;
   border-radius: 16px;
   background-color: gray;
-  gap: 16px;
 }
 
 .project__heading {
@@ -366,7 +381,7 @@ main {
   margin-bottom: 0;
 }
 
-.project__body {
+.project__desc {
   margin: 0;
 }
 
@@ -386,20 +401,6 @@ main {
   height: 36px;
 }
 
-.project--dev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-
 .project--dev__tags-list {
   font-family: "Roboto Condensed", sans-serif;
   display: -webkit-box;
@@ -417,6 +418,27 @@ main {
 
 .project--dev__tags-list li {
   font-size: 1em;
+}
+
+.project--design {
+  padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.project--design__image {
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project--design__body {
+  padding-right: 24px;
+  padding-left: 24px;
+  gap: 16px;
 }
 
 .logo {

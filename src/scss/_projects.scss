@@ -5,17 +5,25 @@
     gap: 16px;
 }
 
+.project,
+.project--design__body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .project {
     padding: 24px;
+    text-align: center;
     border-radius: 16px;
     background-color: gray;
-    gap: 16px;
     &__heading {
         margin-top: 8px;
         margin-bottom: 0;
     }
 
-    &__body {
+    &__desc {
         margin: 0;
     }
 
@@ -31,10 +39,6 @@
     }
 
     &--dev {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
         &__tags-list {
             font-family: $font-header;
             display: flex;
@@ -42,156 +46,28 @@
             justify-content: center;
             column-gap: 24px;
             row-gap: 12px;
-
             li {
                 font-size: 1em;
             }
         }
     }
+
+    &--design {
+        padding-top: 0;
+        padding-right: 0;
+        padding-left: 0;
+        &__image {
+            width: 100%;
+            height: 175px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            object-fit: cover;
+        }
+
+        &__body {
+            padding-right: 24px;
+            padding-left: 24px;
+            gap: 16px;
+        }
+    }
 }
-
-// .project {
-//     display: grid;
-//     width: 100%;
-//     margin-bottom: 38px;
-//     &:last-child {
-//         margin-bottom: 0;
-//     }
-
-//     &__image {
-//         width: 100%;
-//         height: 134px;
-//         margin-bottom: 16px;
-//         border-radius: 12px;
-//         object-fit: cover;
-//     }
-
-//     &__heading {
-//         margin: 0 0 8px;
-//     }
-
-//     &__date {
-//         margin: 0 0 16px;
-//         text-align: left;
-//     }
-
-//     &__divider {
-//         width: 100%;
-//         height: 1px;
-//         margin-bottom: 16px;
-//         border-radius: 2px;
-//         background-color: var(--text);
-//     }
-
-//     &__description {
-//         margin: 0 0 24px;
-//     }
-
-//     &__links {
-//         display: flex;
-//         align-items: center;
-//         flex-direction: column;
-//         margin: 0 auto;
-//         > *:first-child {
-//             margin-bottom: 16px;
-//         }
-
-//         > * {
-//             width: 50%;
-//         }
-//     }
-
-//     @media only screen and (min-width: 600px) {
-//         margin-bottom: 64px;
-//         grid-template-columns: auto 1fr;
-//         grid-template-rows: repeat(5, auto);
-//         column-gap: 32px;
-//         &__image {
-//             max-width: 200px;
-//             height: 100%;
-//             margin: 0;
-//             grid-row: 1 / 4;
-//             grid-column: 1;
-//         }
-
-//         &__heading {
-//             margin-bottom: 16px;
-//             grid-row: 1;
-//             grid-column: 2;
-//         }
-
-//         &__date {
-//             margin-bottom: 16px;
-//             grid-row: 2;
-//             grid-column: 2;
-//         }
-
-//         &__divider {
-//             align-self: end;
-//             margin-bottom: 0;
-//             grid-row: 3;
-//             grid-column: 2;
-//         }
-
-//         &__description {
-//             margin-top: 24px;
-//             grid-row: 4;
-//             grid-column: 1 / -1;
-//         }
-
-//         &__links {
-//             align-items: stretch;
-//             flex-direction: row;
-//             justify-content: center;
-//             grid-row: 5;
-//             grid-column: 1 / -1;
-//             > *:first-child {
-//                 margin: 0 24px 0 0;
-//             }
-
-//             > * {
-//                 width: fit-content;
-//             }
-//         }
-//     }
-
-//     @media only screen and (min-width: 1025px) {
-//         margin-bottom: 64px;
-//         &__image {
-//             max-width: 280px;
-//             height: 100%;
-//             margin: 0;
-//             grid-row: 1 / -1;
-//         }
-
-//         &__heading {
-//             margin-bottom: 8px;
-//             grid-row: 1;
-//             grid-column: 2;
-//         }
-
-//         &__date {
-//             margin-bottom: 12px;
-//             grid-row: 2;
-//             grid-column: 2;
-//         }
-
-//         &__divider {
-//             margin-bottom: 12px;
-//             grid-row: 3;
-//             grid-column: 2;
-//         }
-
-//         &__description {
-//             margin-top: 0;
-//             margin-bottom: 24px;
-//             grid-row: 4;
-//             grid-column: 2;
-//         }
-
-//         &__links {
-//             grid-row: 5;
-//             grid-column: 2;
-//         }
-//     }
-// }

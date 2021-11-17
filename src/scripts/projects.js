@@ -1,7 +1,7 @@
 const devProject = (title, desc, demoLink, tags, gitHubLink) => {
     const element = document.createElement("div");
-    element.classList.add("project--dev");
     element.classList.add("project");
+    element.classList.add("project--dev");
 
     // GitHub link -- if gitHubLink is undefined, it does not create a link
     let gitLinkElement =
@@ -9,7 +9,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
             ? ""
             : `<a
                 href="${gitHubLink}" 
-                aria-label="Project GitHub" 
+                aria-label="${title} on GitHub" 
                 class="underline-link">
                     <img src="../../assets/icon-github.svg" />
                 </a>`;
@@ -20,7 +20,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
             ? ""
             : `<a 
                 href="${demoLink}"
-                aria-label="Project demo"
+                aria-label="${title} demo"
                 class="underline-link">
                     <img src="../../assets/icon-link.svg" />
                 </a>`;
@@ -38,7 +38,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
     // Combine into total element
     element.innerHTML = `
             <h3 class="project__heading">${title}</h3>
-            <p class="project__body">${desc}</p>
+            <p class="project__desc">${desc}</p>
             ${tagsElement}
             <div class="project__links">
                 ${gitLinkElement}
@@ -49,25 +49,33 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
     return { element };
 };
 
-const designProject = (image, imgAlt, title, date, desc, link) => {
+const designProject = (image, imgAlt, title, desc, link) => {
     const element = document.createElement("div");
     element.classList.add("project");
+    element.classList.add("project--design");
 
     element.innerHTML = `
-            <img src="${image}" alt="${imgAlt}" class="project__image" />
-            <h3 class="project__heading">${title}</h3>
-            <p class="project__date">${date}</p>
-            <div class="project__divider"></div>
-            <p class="project__description">${desc}</p>
-            <div class="project__links">
-                <a 
-                    href="${link}" 
-                    class="button-link" 
-                    aria-label="${title} on Behance"
-                    >Behance
-                </a>
+            <img
+                src="${image}" 
+                alt="${imgAlt}" 
+                class="project--design__image" 
+            />
+            <div class="project--design__body">
+                <h3 class="project__heading">${title}</h3>
+                <p class="project__desc">${desc}</p>
+                <div class="project__links">
+                    <a 
+                        href="${link}" 
+                        aria-label="${title} on Behance"
+                        class="underline-link" 
+                        >
+                            <img src="../../assets/icon-behance.svg" />
+                    </a>
+                </div>
             </div>
         `;
+
+    console.log(element);
 
     return { element };
 };
@@ -80,20 +88,7 @@ function displayDevProjects() {
 }
 
 function displayDesignProjects() {
-    const projectContainer = document.getElementById("project-container");
-    const currentProjects = document.querySelectorAll(
-        "#project-container > div.project"
-    );
-    const devBtn = document.getElementById("dev-category-btn");
-    const designBtn = document.getElementById("design-category-btn");
-
-    devBtn.classList.remove("category-button--active");
-    designBtn.classList.add("category-button--active");
-
-    currentProjects.forEach((element) => {
-        element.remove();
-    });
-
+    const projectContainer = document.getElementById("design-projects");
     PROJECTS.getDesignProjects().forEach((obj) => {
         projectContainer.appendChild(obj.element);
     });
@@ -101,6 +96,7 @@ function displayDesignProjects() {
 
 export function loadProjects() {
     displayDevProjects();
+    displayDesignProjects();
 }
 
 export const PROJECTS = (() => {
@@ -120,13 +116,6 @@ export const PROJECTS = (() => {
             "https://github.com/cagloria/rest-countries-api"
         ),
         devProject(
-            "Shortly URL Shortening API Challenge",
-            "Sends a POST request containing a URL to the shrtcode API and displays a shortened URL. Contains a responsive design.",
-            "https://cagloria.github.io/url-shortening-api/",
-            ["React", "JavaScript", "SCSS", "API"],
-            "https://github.com/cagloria/url-shortening-api"
-        ),
-        devProject(
             "Easybank Landing Page",
             "A responsive landing page for a fictional banking app.",
             "https://cagloria.github.io/easybank-landing-page/",
@@ -144,14 +133,16 @@ export const PROJECTS = (() => {
 
     const _designProjects = [
         designProject(
+            "../../assets/projects/cover-weather.jpg",
+            "The Weather App screen displayed on desktop, tablet, and mobile",
             "Weather App",
-            "May 2021",
             "Shows the current weather of any city, the sunrise/sunset in local time, and the 3-day forecast. Features a temperature scale toggle. The app's color theme reflects if it's daytime or nighttime in the city.",
             "https://www.behance.net/gallery/119018551/Weather-App"
         ),
         designProject(
+            "../../assets/projects/cover-goals.jpg",
+            "The Goal Tracker app's daily and weekly sections",
             "Goals Tracker",
-            "April 2021",
             "Tracks daily and weekly goals, displaying a progress bar and how much time or instances remain. Allows the user to track a goal by time, making progress through a stopwatch or pomodoro, or to create a goal by count, making progress through increments.",
             "https://www.behance.net/gallery/116895337/Goals-Tracker"
         ),
