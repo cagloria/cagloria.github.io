@@ -1,3 +1,17 @@
+.skip-link {
+    position: fixed;
+    z-index: 9;
+    top: -25px;
+    left: 0;
+    transition: transform 0.3s ease-out;
+    transition-delay: 2s;
+    background-color: var(--background);
+    &:focus {
+        transition-delay: 0s;
+        transform: translateY(25px);
+    }
+}
+
 .logo {
     width: 45px;
     height: 45px;

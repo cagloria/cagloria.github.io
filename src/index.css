@@ -136,7 +136,7 @@ main {
 
 .header {
   position: fixed;
-  z-index: 9;
+  z-index: 1;
   top: 0;
   left: 0;
   display: -ms-grid;
@@ -526,6 +526,27 @@ main {
     background: -webkit-gradient(linear, left top, right top, from(#b7a2fb66), to(#ff729f66));
     background: linear-gradient(90deg, #b7a2fb66 0%, #ff729f66 100%);
   }
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 9;
+  top: -25px;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  background-color: var(--background);
+}
+
+.skip-link:focus {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
 }
 
 .logo {
