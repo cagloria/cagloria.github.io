@@ -103,7 +103,7 @@ export const PROJECTS = (() => {
     const _devProjects = [
         devProject(
             "Weather App",
-            "Fetches data from the OpenWeather API to display the current weather of any city, the sunrise/sunset in local time, and the 3-day forecast. Allows the user to change the temperature scale with a toggle. Uses styled-components to change the color theme depending on if it's daytime or nighttime in the selected city.",
+            "Fetches data from the OpenWeather API to display the current weather, sunrise/sunset, and 3-day forecast of the entered city. Allows the user to change the temperature scale with a toggle. Uses styled-components to change the color theme.",
             undefined,
             ["React", "JavaScript", "SCSS", "API"],
             "https://github.com/cagloria/weather-app"
@@ -117,7 +117,7 @@ export const PROJECTS = (() => {
         ),
         devProject(
             "Easybank Landing Page",
-            "A responsive landing page for a fictional banking app.",
+            "A responsive landing page for a fictional banking app. Contains a responsive design.",
             "https://cagloria.github.io/easybank-landing-page/",
             ["HTML", "JavaScript", "SCSS"],
             "https://github.com/cagloria/easybank-landing-page"

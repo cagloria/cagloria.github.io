@@ -1,8 +1,22 @@
+$tablet-size: 700px;
+$desktop-size: 1440px;
+$project-border-radius: 16px;
+
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
     gap: 16px;
+    &--dev {
+        @media only screen and (min-width: $tablet-size) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media only screen and (min-width: $desktop-size) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
 }
 
 .project,
@@ -11,12 +25,16 @@
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    @media only screen and (min-width: $tablet-size) {
+        align-items: flex-start;
+        text-align: left;
+    }
 }
 
 .project {
     padding: 24px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: $project-border-radius;
     background-color: gray;
     &__heading {
         margin-top: 8px;
@@ -29,7 +47,10 @@
 
     &__links {
         display: flex;
+        align-items: flex-end;
+        flex-grow: 1;
         justify-content: center;
+        width: 100%;
         margin-top: 12px;
         gap: 48px;
         img {
@@ -44,6 +65,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            width: 100%;
             column-gap: 24px;
             row-gap: 12px;
             li {
@@ -59,8 +81,8 @@
         &__image {
             width: 100%;
             height: 175px;
-            border-top-left-radius: 16px;
-            border-top-right-radius: 16px;
+            border-top-left-radius: $project-border-radius;
+            border-top-right-radius: $project-border-radius;
             object-fit: cover;
         }
 
@@ -69,5 +91,31 @@
             padding-left: 24px;
             gap: 16px;
         }
+
+        @media only screen and (min-width: $tablet-size) {
+            flex-direction: row;
+            padding-bottom: 0;
+            &__image {
+                width: 50%;
+                height: 100%;
+                border-radius: 0;
+                border-top-left-radius: $project-border-radius;
+                border-bottom-left-radius: $project-border-radius;
+            }
+
+            &__body {
+                padding-top: 24px;
+                padding-bottom: 24px;
+                padding-left: 8px;
+            }
+        }
+    }
+}
+
+.project,
+.project--design__body {
+    @media only screen and (min-width: $tablet-size) {
+        align-items: flex-start;
+        text-align: left;
     }
 }
