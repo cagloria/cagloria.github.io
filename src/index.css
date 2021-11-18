@@ -78,7 +78,7 @@ h1 {
 h2 {
   font-size: 3em;
   position: relative;
-  margin: 0 0 32px;
+  margin: 0 0 24px;
 }
 
 h2::before {
@@ -115,6 +115,10 @@ p,
 li {
   font-size: 1.125em;
   line-height: 150%;
+}
+
+p {
+  margin-bottom: 32px;
 }
 
 button {
@@ -375,8 +379,35 @@ main {
   }
 }
 
-.project,
-.project--design__body {
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 16px;
+  background: -webkit-gradient(linear, left top, right top, from(#4acafd66), color-stop(50%, #b7a2fb66), to(#ff729f66));
+  background: linear-gradient(90deg, #4acafd66 0%, #b7a2fb66 50%, #ff729f66 100%);
+}
+
+.project__image {
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (min-width: 700px) {
+  .project__image {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+.project__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,60 +418,35 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 24px;
+  text-align: center;
   gap: 16px;
 }
 
 @media only screen and (min-width: 700px) {
-  .project,
-  .project--design__body {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  .project__body {
     text-align: left;
   }
 }
 
-.project {
-  padding: 24px;
-  text-align: center;
-  border-radius: 16px;
-  background: -webkit-gradient(linear, left top, right top, from(#4acafd66), color-stop(50%, #b7a2fb66), to(#ff729f66));
-  background: linear-gradient(90deg, #4acafd66 0%, #b7a2fb66 50%, #ff729f66 100%);
-}
-
 .project__heading {
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-
-.project__desc {
+  width: 100%;
   margin: 0;
 }
 
-.project__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.project__desc {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  margin-top: 12px;
-  gap: 48px;
+  margin: 0;
 }
 
-.project__links img {
-  width: 36px;
-  height: 36px;
-}
-
-.project--dev__tags-list {
+.project__tags-list {
   font-family: "Roboto Condensed", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -456,32 +462,24 @@ main {
   row-gap: 12px;
 }
 
-.project--dev__tags-list li {
+.project__tags-list li {
   font-size: 1em;
 }
 
-.project--design {
-  padding-top: 0;
-  padding-right: 0;
-  padding-left: 0;
+.project__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 12px;
+  gap: 48px;
 }
 
-.project--design__image {
-  width: 100%;
-  height: 175px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.project--design__body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100%;
-  padding-right: 24px;
-  padding-left: 24px;
-  gap: 16px;
+.project__links img {
+  width: 36px;
+  height: 36px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -490,24 +488,11 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-bottom: 0;
-  }
-  .project--design__image {
-    width: 50%;
-    height: 100%;
-    border-radius: 0;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-  }
-  .project--design__body {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 8px;
   }
 }
 
 @media only screen and (min-width: 700px) {
-  .project--dev {
+  .project--dev:nth-of-type(odd) {
     background: -webkit-gradient(linear, left top, right top, from(#4acafd66), to(#b7a2fb66));
     background: linear-gradient(90deg, #4acafd66 0%, #b7a2fb66 100%);
   }
@@ -527,8 +512,8 @@ main {
     background: linear-gradient(90deg, #7db8ff66 0%, #e588d866 100%);
   }
   .project--dev:nth-of-type(3n + 3) {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(229, 136, 216, 0.4)), to(rgba(255, 114, 159, 0.4)));
-    background: linear-gradient(90deg, rgba(229, 136, 216, 0.4) 0%, rgba(255, 114, 159, 0.4) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#e588d866), to(#ff729f66));
+    background: linear-gradient(90deg, #e588d866 0%, #ff729f66 100%);
   }
 }
 
@@ -540,16 +525,6 @@ main {
   .project--design:nth-of-type(even) {
     background: -webkit-gradient(linear, left top, right top, from(#b7a2fb66), to(#ff729f66));
     background: linear-gradient(90deg, #b7a2fb66 0%, #ff729f66 100%);
-  }
-}
-
-@media only screen and (min-width: 700px) {
-  .project,
-  .project--design__body {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    text-align: left;
   }
 }
 

@@ -1,6 +1,5 @@
-$tablet-size: 700px;
-$desktop-size: 1440px;
-$project-border-radius: 16px;
+$tablet-size: 700px; // Dev projects change to two columns
+$desktop-size: 1440px; // Dev projects change to three columns, design projects to two
 $project-color-primary: #4acafd66;
 $project-color-secondary: #b7a2fb66;
 $project-color-tertiary: #ff729f66;
@@ -28,43 +27,67 @@ $project-color-tertiary: #ff729f66;
     }
 }
 
-.project,
-.project--design__body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 16px;
-    @media only screen and (min-width: $tablet-size) {
-        align-items: flex-start;
-        text-align: left;
-    }
-}
-
 .project {
-    padding: 24px;
-    text-align: center;
-    border-radius: $project-border-radius;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 16px;
     background: linear-gradient(
         90deg,
         $project-color-primary 0%,
         $project-color-secondary 50%,
         $project-color-tertiary 100%
     );
+    &__image {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        @media only screen and (min-width: $tablet-size) {
+            width: 40%;
+            height: 100%;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-grow: 1;
+        box-sizing: border-box;
+        padding: 24px;
+        text-align: center;
+        gap: 16px;
+        @media only screen and (min-width: $tablet-size) {
+            text-align: left;
+        }
+    }
+
     &__heading {
-        margin-top: 8px;
-        margin-bottom: 0;
+        width: 100%;
+        margin: 0;
     }
 
     &__desc {
+        flex-grow: 1;
         margin: 0;
+    }
+
+    &__tags-list {
+        font-family: $font-header;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        column-gap: 24px;
+        row-gap: 12px;
+        li {
+            font-size: 1em;
+        }
     }
 
     &__links {
         display: flex;
-        align-items: flex-end;
-        flex-grow: 1;
         justify-content: center;
-        width: 100%;
         margin-top: 12px;
         gap: 48px;
         img {
@@ -73,68 +96,22 @@ $project-color-tertiary: #ff729f66;
         }
     }
 
-    &--dev {
-        &__tags-list {
-            font-family: $font-header;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            column-gap: 24px;
-            row-gap: 12px;
-            li {
-                font-size: 1em;
-            }
-        }
-    }
-
     &--design {
-        padding-top: 0;
-        padding-right: 0;
-        padding-left: 0;
-        &__image {
-            width: 100%;
-            height: 175px;
-            border-top-left-radius: $project-border-radius;
-            border-top-right-radius: $project-border-radius;
-            object-fit: cover;
-        }
-
-        &__body {
-            box-sizing: border-box;
-            height: 100%;
-            padding-right: 24px;
-            padding-left: 24px;
-            gap: 16px;
-        }
-
         @media only screen and (min-width: $tablet-size) {
             flex-direction: row;
-            padding-bottom: 0;
-            &__image {
-                width: 50%;
-                height: 100%;
-                border-radius: 0;
-                border-top-left-radius: $project-border-radius;
-                border-bottom-left-radius: $project-border-radius;
-            }
-
-            &__body {
-                padding-top: 24px;
-                padding-bottom: 24px;
-                padding-left: 8px;
-            }
         }
     }
 
     // Background gradient for dev projects
     &--dev {
         @media only screen and (min-width: $tablet-size) {
-            background: linear-gradient(
-                90deg,
-                $project-color-primary 0%,
-                $project-color-secondary 100%
-            );
+            &:nth-of-type(odd) {
+                background: linear-gradient(
+                    90deg,
+                    $project-color-primary 0%,
+                    $project-color-secondary 100%
+                );
+            }
 
             &:nth-of-type(even) {
                 background: linear-gradient(
@@ -149,7 +126,7 @@ $project-color-tertiary: #ff729f66;
             &:nth-of-type(3n + 1) {
                 background: linear-gradient(
                     90deg,
-                    #4acafd66 0%,
+                    $project-color-primary 0%,
                     #7db8ff66 100%
                 );
             }
@@ -165,8 +142,8 @@ $project-color-tertiary: #ff729f66;
             &:nth-of-type(3n + 3) {
                 background: linear-gradient(
                     90deg,
-                    rgba(229, 136, 216, 0.4) 0%,
-                    rgba(255, 114, 159, 0.4) 100%
+                    #e588d866 0%,
+                    $project-color-tertiary 100%
                 );
             }
         }
@@ -189,13 +166,5 @@ $project-color-tertiary: #ff729f66;
                 );
             }
         }
-    }
-}
-
-.project,
-.project--design__body {
-    @media only screen and (min-width: $tablet-size) {
-        align-items: flex-start;
-        text-align: left;
     }
 }

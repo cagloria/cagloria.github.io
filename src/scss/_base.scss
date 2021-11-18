@@ -58,7 +58,7 @@ h1 {
 h2 {
     font-size: 3em;
     position: relative;
-    margin: 0 0 32px;
+    margin: 0 0 24px;
     &::before {
         position: absolute;
         top: -16px;
@@ -88,6 +88,10 @@ p,
 li {
     font-size: 1.125em;
     line-height: 150%;
+}
+
+p {
+    margin-bottom: 32px;
 }
 
 button {

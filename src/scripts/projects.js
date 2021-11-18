@@ -27,7 +27,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
 
     // Creates list for tags
     let tagsElement = `<ul 
-        class="project--dev__tags-list remove-default-list">`;
+        class="project__tags-list remove-default-list">`;
 
     tags.forEach((tag) => {
         tagsElement += `<li>${tag}</li>`;
@@ -37,6 +37,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
 
     // Combine into total element
     element.innerHTML = `
+        <div class="project__body">
             <h3 class="project__heading">${title}</h3>
             <p class="project__desc">${desc}</p>
             ${tagsElement}
@@ -44,6 +45,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
                 ${gitLinkElement}
                 ${demoLinkElement}
             </div>
+        </div>
         `;
 
     return { element };
@@ -58,9 +60,9 @@ const designProject = (image, imgAlt, title, desc, link) => {
             <img
                 src="${image}" 
                 alt="${imgAlt}" 
-                class="project--design__image" 
+                class="project__image" 
             />
-            <div class="project--design__body">
+            <div class="project__body">
                 <h3 class="project__heading">${title}</h3>
                 <p class="project__desc">${desc}</p>
                 <div class="project__links">
@@ -74,8 +76,6 @@ const designProject = (image, imgAlt, title, desc, link) => {
                 </div>
             </div>
         `;
-
-    console.log(element);
 
     return { element };
 };
@@ -102,29 +102,29 @@ export function loadProjects() {
 export const PROJECTS = (() => {
     const _devProjects = [
         devProject(
+            "Launch Countdown Timer",
+            "A react app that displays a countdown timer for a randomized launch date stored in the browser's local storage, and updates every second. Uses styled-components for styling.",
+            "https://cagloria.github.io/launch-countdown-timer/",
+            ["React", "JavaScript", "SCSS"],
+            "https://github.com/cagloria/launch-countdown-timer"
+        ),
+        devProject(
             "Weather App",
-            "Fetches data from the OpenWeather API to display the current weather, sunrise/sunset, and 3-day forecast of the entered city. Allows the user to change the temperature scale with a toggle. Uses styled-components to change the color theme.",
+            "A React app that fetches data from the OpenWeather API to display the current weather, sunrise/sunset, and 3-day forecast of the entered city. Allows the user to change the temperature scale with a toggle. Uses styled-components to change the color theme.",
             undefined,
             ["React", "JavaScript", "SCSS", "API"],
             "https://github.com/cagloria/weather-app"
         ),
         devProject(
-            "REST Countries API Challenge",
-            "Sends a GET request to the REST Countries API and displays country data. Allows the user to filter countries by text and region. Contains a responsive design and a theme toggle.",
-            "https://cagloria.github.io/rest-countries-api/",
-            ["React", "JavaScript", "SCSS", "API"],
-            "https://github.com/cagloria/rest-countries-api"
-        ),
-        devProject(
             "Easybank Landing Page",
-            "A responsive landing page for a fictional banking app. Contains a responsive design.",
+            "A responsive landing page for a fictional banking app.",
             "https://cagloria.github.io/easybank-landing-page/",
             ["HTML", "JavaScript", "SCSS"],
             "https://github.com/cagloria/easybank-landing-page"
         ),
         devProject(
-            "Job Listings Challenge",
-            "Displays job listings and allows the user to filter them based on categories. Features a responsive design.",
+            "Job Listings",
+            "A page that displays job listings and allows the user to filter them based on categories.",
             "https://cagloria.github.io/static-job-listings/",
             ["HTML", "JavaScript", "SCSS"],
             "https://github.com/cagloria/static-job-listings"
@@ -136,14 +136,14 @@ export const PROJECTS = (() => {
             "../../assets/projects/cover-weather.jpg",
             "The Weather App screen displayed on desktop, tablet, and mobile",
             "Weather App",
-            "Shows the current weather of any city, the sunrise/sunset in local time, and the 3-day forecast. The app's color theme reflects if it's daytime or nighttime in the city.",
+            "Shows the current weather, sunrise and sunset, and 3-day forecast of an entered city. The app's color theme reflects if it's daytime or nighttime in the city. Initially designed in Invision Studio and finalized in code.",
             "https://www.behance.net/gallery/119018551/Weather-App"
         ),
         designProject(
             "../../assets/projects/cover-goals.jpg",
             "The Goal Tracker app's daily and weekly sections",
             "Goals Tracker",
-            "Tracks daily and weekly goals, displaying a progress bar and how much time or instances remain.",
+            "Tracks daily and weekly goals, displaying a progress bar and how much time or how many instances remain. Features a light mode and dark mode. Designed in Figma.",
             "https://www.behance.net/gallery/116895337/Goals-Tracker"
         ),
     ];
