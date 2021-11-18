@@ -11,7 +11,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
                 href="${gitHubLink}" 
                 aria-label="${title} on GitHub" 
                 class="underline-link">
-                    <img src="../../assets/icon-github.svg" />
+                    <img src="../../assets/icon-github.svg" alt="" />
                 </a>`;
 
     // Demo link -- if demoLink is undefined, it does not create a link
@@ -22,7 +22,7 @@ const devProject = (title, desc, demoLink, tags, gitHubLink) => {
                 href="${demoLink}"
                 aria-label="${title} demo"
                 class="underline-link">
-                    <img src="../../assets/icon-link.svg" />
+                    <img src="../../assets/icon-link.svg" alt="" />
                 </a>`;
 
     // Creates list for tags
@@ -71,7 +71,7 @@ const designProject = (image, imgAlt, title, desc, link) => {
                         aria-label="${title} on Behance"
                         class="underline-link" 
                         >
-                            <img src="../../assets/icon-behance.svg" />
+                            <img src="../../assets/icon-behance.svg" alt="" />
                     </a>
                 </div>
             </div>
@@ -134,7 +134,7 @@ export const PROJECTS = (() => {
     const _designProjects = [
         designProject(
             "../../assets/projects/cover-weather.jpg",
-            "The Weather App screen displayed on desktop, tablet, and mobile",
+            "The Weather App screen displayed on desktop, tablet, and mobile devices",
             "Weather App",
             "Shows the current weather, sunrise and sunset, and 3-day forecast of an entered city. The app's color theme reflects if it's daytime or nighttime in the city. Initially designed in Invision Studio and finalized in code.",
             "https://www.behance.net/gallery/119018551/Weather-App"
