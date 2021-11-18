@@ -136,14 +136,14 @@ export const PROJECTS = (() => {
             "../../assets/projects/cover-weather.jpg",
             "The Weather App screen displayed on desktop, tablet, and mobile",
             "Weather App",
-            "Shows the current weather of any city, the sunrise/sunset in local time, and the 3-day forecast. Features a temperature scale toggle. The app's color theme reflects if it's daytime or nighttime in the city.",
+            "Shows the current weather of any city, the sunrise/sunset in local time, and the 3-day forecast. The app's color theme reflects if it's daytime or nighttime in the city.",
             "https://www.behance.net/gallery/119018551/Weather-App"
         ),
         designProject(
             "../../assets/projects/cover-goals.jpg",
             "The Goal Tracker app's daily and weekly sections",
             "Goals Tracker",
-            "Tracks daily and weekly goals, displaying a progress bar and how much time or instances remain. Allows the user to track a goal by time, making progress through a stopwatch or pomodoro, or to create a goal by count, making progress through increments.",
+            "Tracks daily and weekly goals, displaying a progress bar and how much time or instances remain.",
             "https://www.behance.net/gallery/116895337/Goals-Tracker"
         ),
     ];

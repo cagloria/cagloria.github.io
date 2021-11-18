@@ -368,6 +368,13 @@ main {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .project-container--design {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
 .project,
 .project--design__body {
   display: -webkit-box;
@@ -397,7 +404,8 @@ main {
   padding: 24px;
   text-align: center;
   border-radius: 16px;
-  background-color: gray;
+  background: -webkit-gradient(linear, left top, right top, from(#4acafd66), color-stop(50%, #b7a2fb66), to(#ff729f66));
+  background: linear-gradient(90deg, #4acafd66 0%, #b7a2fb66 50%, #ff729f66 100%);
 }
 
 .project__heading {
@@ -468,6 +476,9 @@ main {
 }
 
 .project--design__body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
   padding-right: 24px;
   padding-left: 24px;
   gap: 16px;
@@ -492,6 +503,43 @@ main {
     padding-top: 24px;
     padding-bottom: 24px;
     padding-left: 8px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .project--dev {
+    background: -webkit-gradient(linear, left top, right top, from(#4acafd66), to(#b7a2fb66));
+    background: linear-gradient(90deg, #4acafd66 0%, #b7a2fb66 100%);
+  }
+  .project--dev:nth-of-type(even) {
+    background: -webkit-gradient(linear, left top, right top, from(#b7a2fb66), to(#ff729f66));
+    background: linear-gradient(90deg, #b7a2fb66 0%, #ff729f66 100%);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .project--dev:nth-of-type(3n + 1) {
+    background: -webkit-gradient(linear, left top, right top, from(#4acafd66), to(#7db8ff66));
+    background: linear-gradient(90deg, #4acafd66 0%, #7db8ff66 100%);
+  }
+  .project--dev:nth-of-type(3n + 2) {
+    background: -webkit-gradient(linear, left top, right top, from(#7db8ff66), to(#e588d866));
+    background: linear-gradient(90deg, #7db8ff66 0%, #e588d866 100%);
+  }
+  .project--dev:nth-of-type(3n + 3) {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(229, 136, 216, 0.4)), to(rgba(255, 114, 159, 0.4)));
+    background: linear-gradient(90deg, rgba(229, 136, 216, 0.4) 0%, rgba(255, 114, 159, 0.4) 100%);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .project--design {
+    background: -webkit-gradient(linear, left top, right top, from(#4acafd66), to(#b7a2fb66));
+    background: linear-gradient(90deg, #4acafd66 0%, #b7a2fb66 100%);
+  }
+  .project--design:nth-of-type(even) {
+    background: -webkit-gradient(linear, left top, right top, from(#b7a2fb66), to(#ff729f66));
+    background: linear-gradient(90deg, #b7a2fb66 0%, #ff729f66 100%);
   }
 }
 

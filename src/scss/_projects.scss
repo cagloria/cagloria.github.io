@@ -1,6 +1,9 @@
 $tablet-size: 700px;
 $desktop-size: 1440px;
 $project-border-radius: 16px;
+$project-color-primary: #4acafd66;
+$project-color-secondary: #b7a2fb66;
+$project-color-tertiary: #ff729f66;
 
 .project-container {
     display: grid;
@@ -15,6 +18,12 @@ $project-border-radius: 16px;
 
         @media only screen and (min-width: $desktop-size) {
             grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &--design {
+        @media only screen and (min-width: $desktop-size) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
@@ -35,7 +44,12 @@ $project-border-radius: 16px;
     padding: 24px;
     text-align: center;
     border-radius: $project-border-radius;
-    background-color: gray;
+    background: linear-gradient(
+        90deg,
+        $project-color-primary 0%,
+        $project-color-secondary 50%,
+        $project-color-tertiary 100%
+    );
     &__heading {
         margin-top: 8px;
         margin-bottom: 0;
@@ -87,6 +101,8 @@ $project-border-radius: 16px;
         }
 
         &__body {
+            box-sizing: border-box;
+            height: 100%;
             padding-right: 24px;
             padding-left: 24px;
             gap: 16px;
@@ -107,6 +123,70 @@ $project-border-radius: 16px;
                 padding-top: 24px;
                 padding-bottom: 24px;
                 padding-left: 8px;
+            }
+        }
+    }
+
+    // Background gradient for dev projects
+    &--dev {
+        @media only screen and (min-width: $tablet-size) {
+            background: linear-gradient(
+                90deg,
+                $project-color-primary 0%,
+                $project-color-secondary 100%
+            );
+
+            &:nth-of-type(even) {
+                background: linear-gradient(
+                    90deg,
+                    $project-color-secondary 0%,
+                    $project-color-tertiary 100%
+                );
+            }
+        }
+
+        @media only screen and (min-width: $desktop-size) {
+            &:nth-of-type(3n + 1) {
+                background: linear-gradient(
+                    90deg,
+                    #4acafd66 0%,
+                    #7db8ff66 100%
+                );
+            }
+
+            &:nth-of-type(3n + 2) {
+                background: linear-gradient(
+                    90deg,
+                    #7db8ff66 0%,
+                    #e588d866 100%
+                );
+            }
+
+            &:nth-of-type(3n + 3) {
+                background: linear-gradient(
+                    90deg,
+                    rgba(229, 136, 216, 0.4) 0%,
+                    rgba(255, 114, 159, 0.4) 100%
+                );
+            }
+        }
+    }
+
+    // Background gradient for design projects
+    &--design {
+        @media only screen and (min-width: $desktop-size) {
+            background: linear-gradient(
+                90deg,
+                $project-color-primary 0%,
+                $project-color-secondary 100%
+            );
+
+            &:nth-of-type(even) {
+                background: linear-gradient(
+                    90deg,
+                    $project-color-secondary 0%,
+                    $project-color-tertiary 100%
+                );
             }
         }
     }
