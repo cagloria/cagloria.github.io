@@ -7,6 +7,7 @@
     box-sizing: border-box;
     width: 100%;
     padding: 40px var(--side-padding) 16px var(--side-padding);
+    transition: transform 0.3s ease-out;
     background-color: var(--background);
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
@@ -40,6 +41,14 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+    }
+
+    &--closed {
+        transform: translateY(-85px);
+    }
+
+    @media screen and (prefers-reduced-motion) {
+        transition: none;
     }
 
     @media screen and (min-width: 600px) {
