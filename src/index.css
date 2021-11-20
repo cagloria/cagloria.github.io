@@ -212,8 +212,8 @@ main {
 }
 
 .header--closed {
-  -webkit-transform: translateY(-36px);
-          transform: translateY(-36px);
+  -webkit-transform: translateY(-62px);
+          transform: translateY(-62px);
 }
 
 @media screen and (prefers-reduced-motion) {
