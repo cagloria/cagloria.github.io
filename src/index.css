@@ -149,7 +149,7 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  padding: 40px var(--side-padding) 16px var(--side-padding);
+  padding: 16px var(--side-padding);
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
@@ -212,8 +212,8 @@ main {
 }
 
 .header--closed {
-  -webkit-transform: translateY(-85px);
-          transform: translateY(-85px);
+  -webkit-transform: translateY(-36px);
+          transform: translateY(-36px);
 }
 
 @media screen and (prefers-reduced-motion) {

@@ -6,7 +6,7 @@
     display: grid;
     box-sizing: border-box;
     width: 100%;
-    padding: 40px var(--side-padding) 16px var(--side-padding);
+    padding: 16px var(--side-padding);
     transition: transform 0.3s ease-out;
     background-color: var(--background);
     grid-template-rows: auto auto;
@@ -44,7 +44,7 @@
     }
 
     &--closed {
-        transform: translateY(-85px);
+        transform: translateY(-36px);
     }
 
     @media screen and (prefers-reduced-motion) {
