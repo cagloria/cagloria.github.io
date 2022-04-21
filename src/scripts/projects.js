@@ -102,17 +102,30 @@ export function loadProjects() {
 export const PROJECTS = (() => {
     const _devProjects = [
         devProject(
+            "Space Tourism Website",
+            "A React website using React Router to create multiple pages and styled-components to implement CSS-in-JS. Contains a responsive layout and is deployed to Netlify.",
+            "https://cagloria-space-tourism.netlify.app/",
+            [
+                "React",
+                "JavaScript",
+                "SCSS",
+                "styled-components",
+                "React Router",
+            ],
+            "https://github.com/cagloria/space-tourism-website"
+        ),
+        devProject(
             "Launch Countdown Timer",
-            "A react app that displays a countdown timer for a randomized launch date stored in the browser's local storage, and updates every second. Uses styled-components for styling.",
+            "A React app that displays a countdown timer for a randomized launch date stored in the browser's local storage, and updates every second. Uses styled-components to implement CSS-in-JS.",
             "https://cagloria.github.io/launch-countdown-timer/",
-            ["React", "JavaScript", "SCSS"],
+            ["React", "JavaScript", "SCSS", "styled-components"],
             "https://github.com/cagloria/launch-countdown-timer"
         ),
         devProject(
             "Weather App",
             "A React app that fetches data from the OpenWeather API to display the current weather, sunrise/sunset, and 3-day forecast of the entered city. Allows the user to change the temperature scale with a toggle. Uses styled-components to change the color theme.",
             undefined,
-            ["React", "JavaScript", "SCSS", "API"],
+            ["React", "JavaScript", "SCSS", "API", "styled-components"],
             "https://github.com/cagloria/weather-app"
         ),
         devProject(
@@ -121,13 +134,6 @@ export const PROJECTS = (() => {
             "https://cagloria.github.io/easybank-landing-page/",
             ["HTML", "JavaScript", "SCSS"],
             "https://github.com/cagloria/easybank-landing-page"
-        ),
-        devProject(
-            "Job Listings",
-            "A page that displays job listings and allows the user to filter them based on categories.",
-            "https://cagloria.github.io/static-job-listings/",
-            ["HTML", "JavaScript", "SCSS"],
-            "https://github.com/cagloria/static-job-listings"
         ),
     ];
 

@@ -44,13 +44,8 @@
     }
 
     &--closed {
-        transform: translateY(-62px);
+        transform: translateY(-64px);
     }
-
-    @media screen and (prefers-reduced-motion) {
-        transition: none;
-    }
-
     @media screen and (min-width: 600px) {
         align-content: center;
         height: 78px;

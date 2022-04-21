@@ -34,7 +34,7 @@
         width: 110%;
         height: 2px;
         content: "";
-        transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out, background-color 0.3s ease-out;
         transform: translateX(-50%) scaleX(0);
         border-radius: 4px;
         background-color: white;
@@ -48,7 +48,6 @@
     }
 
     &:active {
-        color: var(--primary);
         &::after {
             transform: translateX(-50%) scaleX(1);
             background-color: var(--primary);

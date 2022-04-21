@@ -212,15 +212,8 @@ main {
 }
 
 .header--closed {
-  -webkit-transform: translateY(-62px);
-          transform: translateY(-62px);
-}
-
-@media screen and (prefers-reduced-motion) {
-  .header {
-    -webkit-transition: none;
-    transition: none;
-  }
+  -webkit-transform: translateY(-64px);
+          transform: translateY(-64px);
 }
 
 @media screen and (min-width: 600px) {
@@ -595,10 +588,10 @@ main {
   width: 110%;
   height: 2px;
   content: "";
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transition: background-color 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: background-color 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out, -webkit-transform 0.3s ease-out;
   -webkit-transform: translateX(-50%) scaleX(0);
           transform: translateX(-50%) scaleX(0);
   border-radius: 4px;
@@ -610,10 +603,6 @@ main {
 .underline-link:hover::after {
   -webkit-transform: translateX(-50%) scaleX(1);
           transform: translateX(-50%) scaleX(1);
-}
-
-.underline-link:active {
-  color: var(--primary);
 }
 
 .underline-link:active::after {
