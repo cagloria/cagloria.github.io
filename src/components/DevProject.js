@@ -4,7 +4,7 @@ import iconGitHub from "../assets/icon-github.svg";
 import iconLink from "../assets/icon-link.svg";
 import { projectDeviceQueries } from "./Themes";
 
-const { dev } = projectDeviceQueries;
+const { twoColumn, threeColumn } = projectDeviceQueries;
 
 const bgOpacity = "66";
 
@@ -36,7 +36,7 @@ const Project = styled.div`
         margin: 0;
     }
 
-    @media only screen and (min-width: ${dev.twoColumn}) {
+    @media only screen and (min-width: ${twoColumn}) {
         text-align: left;
 
         &:nth-of-type(odd) {
@@ -56,7 +56,7 @@ const Project = styled.div`
         }
     }
 
-    @media only screen and (min-width: ${dev.threeColumn}) {
+    @media only screen and (min-width: ${threeColumn}) {
         &:nth-of-type(3n + 1) {
             background: linear-gradient(
                 90deg,

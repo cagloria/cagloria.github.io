@@ -36,13 +36,13 @@
     ],
     "design": [
         {
-            "img": "./assets/cover-calculator-design.png",
+            "img": "./assets/cover-calculator.png",
             "title": "Calculator",
             "desc": "A design for a calculator app.",
             "behanceLink": "https://www.behance.net/gallery/146723389/Daily-UI-004-Calculator"
         },
         {
-            "img": "./assets/cover-landing-page.png",
+            "img": "./assets/cover-endeavor-landing-page.png",
             "title": "Endeavor Landing Page",
             "desc": "Landing page for a fictional project management application.",
             "behanceLink": "https://www.behance.net/gallery/146538613/Daily-UI-003-Landing-Page"
@@ -54,15 +54,15 @@
             "behanceLink": "https://www.behance.net/gallery/146125371/Daily-UI-002-Credit-Card-Checkout"
         },
         {
-            "img": "./assets/cover-weather.jpg",
+            "img": "./assets/cover-weather.png",
             "title": "Weather App",
-            "desc": "Shows the current weather, sunrise and sunset, and 3-day forecast of an entered city. The app's color theme reflects if it's daytime or nighttime in the city. Initially designed in Invision Studio and finalized in code.",
+            "desc": "Shows the current weather, sunrise and sunset, and 3-day forecast of an entered city. The app's color theme reflects if it's daytime or nighttime in the city.",
             "behanceLink": "https://www.behance.net/gallery/119018551/Weather-App"
         },
         {
-            "img": "./assets/cover-goals.jpg",
+            "img": "./assets/cover-goals.png",
             "title": "Goals Tracker",
-            "desc": "Tracks daily and weekly goals, displaying a progress bar and how much time or how many instances remain. Features a light mode and dark mode. Designed in Figma.",
+            "desc": "Tracks daily and weekly goals, displaying a progress bar and how much time or how many instances remain. Features a light mode and dark mode.",
             "behanceLink": "https://www.behance.net/gallery/116895337/Goals-Tracker"
         }
     ]
