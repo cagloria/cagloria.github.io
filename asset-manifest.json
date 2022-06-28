@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/static/js/main.aa4ad50c.js",
+    "static/js/787.14afb078.chunk.js": "/static/js/787.14afb078.chunk.js",
+    "static/media/icon-react.svg": "/static/media/icon-react.82bc2046bcdaa4f83900308fe688188a.svg",
+    "static/media/logo.svg": "/static/media/logo.12e10c7d50965bf9c8df32d8314217df.svg",
+    "static/media/icon-behance.svg": "/static/media/icon-behance.fb6340ae357a6d10aa92b31bc0dde39f.svg",
+    "static/media/icon-git.svg": "/static/media/icon-git.a6582aa5ca98ae7259c7c6a8bc7f3dad.svg",
+    "static/media/icon-sass.svg": "/static/media/icon-sass.3327b6b9d23ff75a3317ab759566d87f.svg",
+    "static/media/icon-figma.svg": "/static/media/icon-figma.9632f9bd0689b4bb9f0a94eb57ffaf9d.svg",
+    "static/media/icon-vscode.svg": "/static/media/icon-vscode.799c693cfad1c94d74b6034e0e94e411.svg",
+    "static/media/icon-javascript.svg": "/static/media/icon-javascript.54a56fd26413b3811adce87fec22bc41.svg",
+    "static/media/icon-github-primary.svg": "/static/media/icon-github-primary.0ce81f0ced8f86aa1151d9023197da81.svg",
+    "static/media/icon-github.svg": "/static/media/icon-github.3eaa6d85e3f7638195172d044da6ea4f.svg",
+    "index.html": "/index.html",
+    "static/media/icon-link.svg": "/static/media/icon-link.46242321729ee453fbf69d81e8638937.svg",
+    "static/media/icon-css.svg": "/static/media/icon-css.8f2329eabd2fb8a8c3fab7387d5dab98.svg",
+    "static/media/icon-html.svg": "/static/media/icon-html.90b42b68914e2a7c7a4002d9355fc060.svg",
+    "main.aa4ad50c.js.map": "/static/js/main.aa4ad50c.js.map",
+    "787.14afb078.chunk.js.map": "/static/js/787.14afb078.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.aa4ad50c.js"
+  ]
+}
