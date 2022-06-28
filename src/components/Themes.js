@@ -10,6 +10,16 @@ export const colors = {
         "linear-gradient(90deg, #4acafd 0%, #b7a2fb 51.04%, #ff729f 100%)",
 };
 
+export const font = {
+    heading: '"Roboto Condensed", sans-serif',
+    body: '"PT Sans", sans-serif',
+};
+
+export const projectDeviceQueries = {
+    twoColumn: "755px",
+    threeColumn: "1800px",
+};
+
 export const GlobalStyles = createGlobalStyle`
     .side-padding {
         padding-left: 5vw;
@@ -20,24 +30,14 @@ export const GlobalStyles = createGlobalStyle`
             padding-right: 8vw;
         }
 
-        @media only screen and (min-width: 769px) {
-            padding-left: 10vw;
-            padding-right: 10vw;
-        }
-
         @media only screen and (min-width: 1025px) {
             padding-left: 15vw;
             padding-right: 15vw;
         }
 
-        @media only screen and (min-width: 1441px) {
-            padding-left: 20vw;
-            padding-right: 20vw;
-        }
-
         @media only screen and (min-width: 2000px) {
-            padding-left: 30vw;
-            padding-right: 30vw;
+            padding-left: 24vw;
+            padding-right: 24vw;
         }
     }
 
@@ -50,7 +50,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: "PT Sans", sans-serif;
+        font-family: ${font.body};
         margin: 0;
         color: ${colors.text};
         background: ${colors.background};
@@ -76,7 +76,7 @@ export const GlobalStyles = createGlobalStyle`
     h1,
     h2,
     h3 {
-        font-family: "Roboto Condensed", sans-serif;
+        font-family: ${font.heading};
         font-weight: 300;
         line-height: 150%;
     }
