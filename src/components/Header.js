@@ -52,7 +52,7 @@ const Container = styled.header`
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 16px;
 
-    transform: translateY(${(props) => (props.closed ? "-65px" : "0")});
+    transform: translateY(${(props) => (props.open ? "0" : "-65px")});
 
     @media screen and (prefers-reduced-motion) {
         transition: none;
@@ -96,14 +96,14 @@ const Container = styled.header`
 `;
 
 export default function Header() {
-    const [headerClosed, setHeaderClosed] = useState(false);
+    const [navVisible, setNavVisible] = useState(true);
     const [isMobile, setIsMobile] = useState(true);
     const [previousY, setPreviousY] = useState(0);
 
     useEffect(() => {
         function handleDeviceChange() {
             setIsMobile(mobileMediaQuery.matches);
-            setHeaderClosed(false);
+            setNavVisible(true);
         }
 
         const mobileMediaQuery = window.matchMedia("(max-width: 599px)");
@@ -119,12 +119,12 @@ export default function Header() {
         function handleScroll() {
             if (isMobile) {
                 const currentY = window.scrollY;
-                setHeaderClosed(currentY > previousY);
+                setNavVisible(currentY < previousY);
                 setPreviousY(currentY);
                 // If user scrolls down, close header. If user scrolls up, open
                 // header.
             } else {
-                setHeaderClosed(false);
+                setNavVisible(true);
             }
         }
 
@@ -133,10 +133,10 @@ export default function Header() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [headerClosed, isMobile, previousY]);
+    }, [navVisible, isMobile, previousY]);
 
     return (
-        <Container className="side-padding" closed={headerClosed}>
+        <Container className="side-padding" open={navVisible}>
             <Logo src={logo} alt="C.A. Gloria logo" width="45" height="45" />
 
             <GitHubLink
