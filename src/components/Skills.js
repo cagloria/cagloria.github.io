@@ -5,6 +5,7 @@ import iconCSS from "../assets/icon-css.svg";
 import iconJavaScript from "../assets/icon-javascript.svg";
 import iconSass from "../assets/icon-sass.svg";
 import iconGit from "../assets/icon-git.svg";
+import iconGitHub from "../assets/icon-github-primary.svg";
 import iconVSCode from "../assets/icon-vscode.svg";
 import iconFigma from "../assets/icon-figma.svg";
 
@@ -74,6 +75,10 @@ export default function Skills() {
                 <li>
                     <img src={iconGit} alt="" />
                     Git
+                </li>
+                <li>
+                    <img src={iconGitHub} alt="" />
+                    GitHub
                 </li>
                 <li>
                     <img src={iconVSCode} alt="" />

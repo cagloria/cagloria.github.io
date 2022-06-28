@@ -135,7 +135,6 @@ export const GlobalStyles = createGlobalStyle`
 
     .underline-link {
         position: relative;
-        transition: color 0.3s ease-out;
         text-align: center;
         &::after {
             position: absolute;
@@ -159,7 +158,6 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         &:active {
-            color: ${colors.primary};
             &::after {
                 transform: translateX(-50%) scaleX(1);
                 background-color: ${colors.primary};
