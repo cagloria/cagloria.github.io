@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors } from "./Themes";
 import logo from "../assets/logo.svg";
@@ -52,7 +52,7 @@ const Container = styled.header`
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 16px;
 
-    transform: translateY(${(props) => (props.closed ? "-60px" : "0")});
+    transform: translateY(${(props) => (props.closed ? "-65px" : "0")});
 
     @media screen and (prefers-reduced-motion) {
         transition: none;
@@ -96,87 +96,39 @@ const Container = styled.header`
 `;
 
 export default function Header() {
-    const [headerClosed, setHeaderClosed] = useState(false);
+    // const [headerClosed, setHeaderClosed] = useState(false);
+    // const [isMobile, setIsMobile] = useState(true);
+    // const [previousYPos, setPreviousYPos] = useState(0);
+    // const [currentYPos, setCurrentYPos] = useState(0);
 
-    const MEDIA = { mobileMediaQuery: window.matchMedia("(max-width: 599px)") };
-    const SCROLL = (() => {
-        let _previousPos = window.scrollY;
+    // const mobileMediaQuery = window.matchMedia("(max-width: 599px)");
+    // mobileMediaQuery.addListener(handleDeviceChange);
+    // handleDeviceChange(mobileMediaQuery.matches);
 
-        const getPrevious = () => _previousPos;
+    // useEffect(() => {
+    //     setPreviousYPos(window.scrollY);
+    //     setCurrentYPos(window.scrollY);
+    //     setHeaderClosed(false);
+    // }, []);
 
-        function setPrevious(newPos) {
-            _previousPos = newPos;
-        }
+    // useEffect(() => {
+    //     window.addEventListener("scroll", () => {
+    //         setPreviousYPos(currentYPos);
+    //         setCurrentYPos(window.scrollY);
+    //         setHeaderClosed(currentYPos > previousYPos);
+    //         // If user scrolls down, close header. If user scrolls up, open
+    //         // header.
+    //     });
+    // }, [currentYPos, previousYPos]);
 
-        return { setPrevious, getPrevious };
-    })();
-
-    window.onload = function () {
-        addMediaQuery();
-    };
-
-    window.onscroll = function () {
-        changeHeader();
-    };
-
-    /**
-     * If the device has changed to tablet layout or wider, show the header
-     */
-    function handleDeviceChange() {
-        if (!MEDIA.mobileMediaQuery.matches) {
-            showHeader();
-        }
-    }
-
-    function isMobile() {
-        const { mobileMediaQuery } = MEDIA;
-        mobileMediaQuery.addListener(handleDeviceChange);
-        return mobileMediaQuery.matches;
-    }
-
-    /**
-     * Hides the mobile header to show the bottom half, showing only navigation
-     * links and hiding social links
-     */
-    function hideHeader() {
-        setHeaderClosed(true);
-    }
-
-    /**
-     * Shows the entire header when scrolling up on mobile, or when switching to
-     * tablet or desktop devices
-     */
-    function showHeader() {
-        setHeaderClosed(false);
-    }
-
-    function addMediaQuery() {
-        const { mobileMediaQuery } = MEDIA;
-        mobileMediaQuery.addListener(handleDeviceChange);
-        handleDeviceChange(mobileMediaQuery);
-    }
-
-    /**
-     * If on mobile and the user scrolls down, hide the bottom layer of the header
-     */
-    function changeHeader() {
-        if (isMobile()) {
-            let current = window.scrollY;
-
-            if (current > SCROLL.getPrevious()) {
-                hideHeader();
-            } else {
-                showHeader();
-            }
-
-            SCROLL.setPrevious(current);
-        } else {
-            showHeader();
-        }
-    }
+    // function handleDeviceChange() {
+    //     console.log(mobileMediaQuery.matches);
+    //     setIsMobile(mobileMediaQuery.matches);
+    //     setHeaderClosed(false);
+    // }
 
     return (
-        <Container className="side-padding" closed={headerClosed}>
+        <Container className="side-padding" /*closed={headerClosed}*/>
             <Logo src={logo} alt="C.A. Gloria logo" width="45" height="45" />
 
             <GitHubLink
@@ -201,7 +153,11 @@ export default function Header() {
                     className="remove-default-list"
                 >
                     <li role="none">
-                        <a href="#intro" role="menuitem" class="underline-link">
+                        <a
+                            href="#intro"
+                            role="menuitem"
+                            className="underline-link"
+                        >
                             Home
                         </a>
                     </li>
@@ -209,13 +165,17 @@ export default function Header() {
                         <a
                             href="#skills"
                             role="menuitem"
-                            class="underline-link"
+                            className="underline-link"
                         >
                             Skills
                         </a>
                     </li>
                     <li role="none">
-                        <a href="#dev" role="menuitem" class="underline-link">
+                        <a
+                            href="#dev"
+                            role="menuitem"
+                            className="underline-link"
+                        >
                             Development
                         </a>
                     </li>
@@ -223,7 +183,7 @@ export default function Header() {
                         <a
                             href="#design"
                             role="menuitem"
-                            class="underline-link"
+                            className="underline-link"
                         >
                             Design
                         </a>
