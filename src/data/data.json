@@ -1,0 +1,69 @@
+{
+    "dev": [
+        {
+            "title": "Space Tourism Website",
+            "desc": "A React website using React Router to create multiple pages and styled-components to implement CSS-in-JS. Contains a responsive layout and is deployed to Netlify.",
+            "tags": [
+                "React",
+                "JavaScript",
+                "SCSS",
+                "styled-components",
+                "React Router"
+            ],
+            "gitHubLink": "https://github.com/cagloria/space-tourism-website",
+            "demoLink": "https://cagloria-space-tourism.netlify.app/"
+        },
+        {
+            "title": "Launch Countdown Timer",
+            "desc": "A React app that displays a countdown timer for a randomized launch date stored in the browser's local storage, and updates every second. Uses styled-components to implement CSS-in-JS.",
+            "tags": ["React", "JavaScript", "SCSS", "styled-components"],
+            "gitHubLink": "https://github.com/cagloria/launch-countdown-timer",
+            "demoLink": "https://cagloria.github.io/launch-countdown-timer/"
+        },
+        {
+            "title": "Weather App",
+            "desc": "A React app that fetches data from the OpenWeather API to display the current weather, sunrise/sunset, and 3-day forecast of the entered city. Allows the user to change the temperature scale with a toggle. Uses styled-components to change the color theme.",
+            "tags": ["React", "JavaScript", "SCSS", "API", "styled-components"],
+            "gitHubLink": "https://github.com/cagloria/weather-app"
+        },
+        {
+            "title": "Easybank Landing Page",
+            "desc": "A responsive landing page for a fictional banking app.",
+            "tags": ["HTML", "JavaScript", "SCSS"],
+            "gitHubLink": "https://github.com/cagloria/easybank-landing-page",
+            "demoLink": "https://cagloria.github.io/easybank-landing-page/"
+        }
+    ],
+    "design": [
+        {
+            "img": "./assets/cover-calculator.png",
+            "title": "Calculator",
+            "desc": "A design for a calculator app.",
+            "behanceLink": "https://www.behance.net/gallery/146723389/Daily-UI-004-Calculator"
+        },
+        {
+            "img": "./assets/cover-endeavor-landing-page.png",
+            "title": "Endeavor Landing Page",
+            "desc": "Landing page for a fictional project management application.",
+            "behanceLink": "https://www.behance.net/gallery/146538613/Daily-UI-003-Landing-Page"
+        },
+        {
+            "img": "./assets/cover-credit-card.png",
+            "title": "Credit Card Checkout",
+            "desc": "Screens for a credit card checkout, featuring payment selection, card selection, and a form for adding a new card.",
+            "behanceLink": "https://www.behance.net/gallery/146125371/Daily-UI-002-Credit-Card-Checkout"
+        },
+        {
+            "img": "./assets/cover-weather.png",
+            "title": "Weather App",
+            "desc": "Shows the current weather, sunrise and sunset, and 3-day forecast of an entered city. The app's color theme reflects if it's daytime or nighttime in the city.",
+            "behanceLink": "https://www.behance.net/gallery/119018551/Weather-App"
+        },
+        {
+            "img": "./assets/cover-goals.png",
+            "title": "Goals Tracker",
+            "desc": "Tracks daily and weekly goals, displaying a progress bar and how much time or how many instances remain. Features a light mode and dark mode.",
+            "behanceLink": "https://www.behance.net/gallery/116895337/Goals-Tracker"
+        }
+    ]
+}
