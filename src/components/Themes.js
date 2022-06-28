@@ -58,13 +58,13 @@ export const GlobalStyles = createGlobalStyle`
 
     main {
         padding-top: 0;
-        padding-bottom: 72px;
+        padding-bottom: 100px;
     }
 
     section {
-        padding-top: 140px;
+        padding-top: 100px;
         &:last-child {
-            padding-bottom: 90px;
+            padding-bottom: 0;
         }
 
         @media only screen and (min-width: 700px) {

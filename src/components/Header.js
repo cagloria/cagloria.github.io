@@ -96,39 +96,47 @@ const Container = styled.header`
 `;
 
 export default function Header() {
-    // const [headerClosed, setHeaderClosed] = useState(false);
-    // const [isMobile, setIsMobile] = useState(true);
-    // const [previousYPos, setPreviousYPos] = useState(0);
-    // const [currentYPos, setCurrentYPos] = useState(0);
+    const [headerClosed, setHeaderClosed] = useState(false);
+    const [isMobile, setIsMobile] = useState(true);
+    const [previousY, setPreviousY] = useState(0);
 
-    // const mobileMediaQuery = window.matchMedia("(max-width: 599px)");
-    // mobileMediaQuery.addListener(handleDeviceChange);
-    // handleDeviceChange(mobileMediaQuery.matches);
+    useEffect(() => {
+        function handleDeviceChange() {
+            setIsMobile(mobileMediaQuery.matches);
+            setHeaderClosed(false);
+        }
 
-    // useEffect(() => {
-    //     setPreviousYPos(window.scrollY);
-    //     setCurrentYPos(window.scrollY);
-    //     setHeaderClosed(false);
-    // }, []);
+        const mobileMediaQuery = window.matchMedia("(max-width: 599px)");
+        mobileMediaQuery.addListener(handleDeviceChange);
+        handleDeviceChange(mobileMediaQuery.matches);
 
-    // useEffect(() => {
-    //     window.addEventListener("scroll", () => {
-    //         setPreviousYPos(currentYPos);
-    //         setCurrentYPos(window.scrollY);
-    //         setHeaderClosed(currentYPos > previousYPos);
-    //         // If user scrolls down, close header. If user scrolls up, open
-    //         // header.
-    //     });
-    // }, [currentYPos, previousYPos]);
+        return () => {
+            mobileMediaQuery.removeListener(handleDeviceChange);
+        };
+    }, []);
 
-    // function handleDeviceChange() {
-    //     console.log(mobileMediaQuery.matches);
-    //     setIsMobile(mobileMediaQuery.matches);
-    //     setHeaderClosed(false);
-    // }
+    useEffect(() => {
+        function handleScroll() {
+            if (isMobile) {
+                const currentY = window.scrollY;
+                setHeaderClosed(currentY > previousY);
+                setPreviousY(currentY);
+                // If user scrolls down, close header. If user scrolls up, open
+                // header.
+            } else {
+                setHeaderClosed(false);
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [headerClosed, isMobile, previousY]);
 
     return (
-        <Container className="side-padding" /*closed={headerClosed}*/>
+        <Container className="side-padding" closed={headerClosed}>
             <Logo src={logo} alt="C.A. Gloria logo" width="45" height="45" />
 
             <GitHubLink
